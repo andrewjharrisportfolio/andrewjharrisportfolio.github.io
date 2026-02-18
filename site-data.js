@@ -98,16 +98,6 @@ const SITE_DATA = {
       description: "Covered foundational and advanced defensive security concepts including network traffic analysis, endpoint hardening, and cloud security principles. Used Zeek and Suricata for network-based detection, Splunk for log aggregation and alerting, and PowerShell for Windows endpoint investigation."
     },
     {
-      name: "TryHackMe — SOC Level 1 Path",
-      tools: ["Splunk", "Snort", "Wireshark", "OSINT Tools", "TheHive", "MITRE ATT&CK"],
-      description: "Completed the SOC Level 1 learning path covering phishing analysis, SIEM operations, network intrusion detection, and threat intelligence workflows. Practiced alert triage, IOC pivoting, and writing structured incident reports using TheHive."
-    },
-    {
-      name: "Blue Team Labs Online — Threat Detection & Forensics",
-      tools: ["Wireshark", "Autopsy", "FTK Imager", "Volatility", "Sysinternals"],
-      description: "Hands-on digital forensics and threat hunting labs covering disk imaging, memory analysis, malware artifact extraction, and timeline reconstruction. Practiced identifying attacker persistence mechanisms and lateral movement artifacts across Windows environments."
-    },
-    {
       name: "LetsDefend — Incident Response Platform",
       tools: ["SIEM", "EDR", "Threat Intelligence Feeds", "Email Header Analysis", "Sandbox"],
       description: "Simulated real-world SOC workflows including alert triage, malware sandbox analysis, phishing investigation, and incident escalation. Developed structured investigation habits aligned with NIST and PICERL incident response frameworks."
