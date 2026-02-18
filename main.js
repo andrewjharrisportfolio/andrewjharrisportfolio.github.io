@@ -444,13 +444,21 @@ function initCertificationsPage() {
       ? `<img class="cert-badge-img" src="${cert.imageUrl}" alt="${cert.name} badge" loading="lazy" />`
       : `<span class="cert-abbr">${cert.abbr}</span>`;
 
+    // Always show abbr label; for image badges it appears below the circle
+    const abbrLabel = cert.imageUrl
+      ? `<span class="cert-abbr">${cert.abbr}</span>`
+      : '';
+
     // Coursera certs link to a verify page, not Credly
     const verifyLabel = cert.credlyUrl.includes('coursera.org')
       ? 'Verify on Coursera ↗'
-      : 'Verify on Credly ↗';
+      : cert.credlyUrl.includes('learn.microsoft.com')
+        ? 'Verify on Microsoft Learn ↗'
+        : 'Verify on Credly ↗';
 
     a.innerHTML = `
       <div class="cert-badge-circle">${badgeInner}</div>
+      ${abbrLabel}
       <span class="cert-name">${cert.name}</span>
       <span class="cert-verify-label">${verifyLabel}</span>
     `;
