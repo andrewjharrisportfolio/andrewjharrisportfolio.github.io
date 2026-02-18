@@ -59,7 +59,7 @@ const SITE_DATA = {
     {
       abbr:      "SEC+",
       name:      "CompTIA Security+",
-      credlyUrl: "https://www.credly.com/badges/74fbf669-fe87-4733-ac17-076db3929e92/linked_in_profile",
+      credlyUrl: "https://www.credly.com/badges/cef8f254-88b9-4935-b002-bdc78cfeb43e/public_url",
       imageUrl:  "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792c5184a/CompTIA_Security_2Bce.png"
     },
     {
