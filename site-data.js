@@ -65,7 +65,7 @@ const SITE_DATA = {
     {
       abbr:      "AZ-500",
       name:      "Microsoft Azure Security Engineer Associate",
-      credlyUrl: "https://www.credly.com/badges/cef8f254-88b9-4935-b002-bdc78cfeb43e/public_url",
+      credlyUrl: "https://learn.microsoft.com/api/credentials/share/en-us/AndrewHarris-1272/19DF8BF95AD43DD7?sharingId=C16A570FF06800C4",
       imageUrl:  "https://images.credly.com/size/340x340/images/336eebfc-0ac3-4583-8a4b-8af602a8b3c8/azure-security-engineer-associate600x600.png"
     },
     {
