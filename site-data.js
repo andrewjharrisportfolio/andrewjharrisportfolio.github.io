@@ -47,7 +47,7 @@ const SITE_DATA = {
     {
       abbr:      "GSEC",
       name:      "GIAC Security Essentials",
-      credlyUrl: "https://www.credly.com/earner/earned/badge/9e242398-4604-430a-839b-4a78bcb2d2f0",
+      credlyUrl: "https://www.credly.com/badges/42812ab8-5637-4544-90b3-01ce70d81969/public_url",
       imageUrl:  ""
     },
     {
