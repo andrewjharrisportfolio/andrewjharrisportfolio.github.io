@@ -53,7 +53,7 @@ const SITE_DATA = {
     {
       abbr:      "GFACT",
       name:      "GIAC Foundational Cybersecurity Technologies",
-      credlyUrl: "https://www.credly.com/badges/42812ab8-5637-4544-90b3-01ce70d81969/public_url",
+      credlyUrl: "https://www.credly.com/badges/74fbf669-fe87-4733-ac17-076db3929e92/linked_in_profile",
       imageUrl:  ""
     },
     {
