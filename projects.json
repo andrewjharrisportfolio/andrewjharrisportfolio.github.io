@@ -1,0 +1,50 @@
+[
+  {
+    "name": "PsExec Lateral Movement Hunt — CyberDefenders Lab",
+    "description": "Investigated SMB traffic in a PCAP file to track attacker pivot paths across networked workstations. Identified compromised hosts (HR_PC, SALES-PC, MARKETING-PC), confirmed psexesvc.exe deployment via ADMIN$ and IPC$ shares, and mapped every stage of the attack to MITRE ATT&CK techniques T1021.002, T1570, and T1569.002.",
+    "tools": ["Wireshark", "MITRE ATT&CK"],
+    "github": "https://github.com/andrewjharrisportfolio/PsExec-Hunt-Lab-Cyberdefenders-",
+    "category": "NETWORK FORENSICS",
+    "featured": true
+  },
+  {
+    "name": "Active Directory Security Assessment with Splunk Integration",
+    "description": "Built a controlled multi-machine lab (Windows Server DC, Ubuntu Splunk SIEM, Windows 10 target, Kali attacker) to evaluate Active Directory resilience against brute-force attacks. Simulated credential attacks with Crowbar, monitored Event ID 4625 alerts in Splunk, and executed Atomic Red Team test cases mapped to MITRE ATT&CK to validate real-time detection coverage.",
+    "tools": ["Splunk", "Sysmon", "Atomic Red Team", "MITRE ATT&CK", "Kali Linux", "Crowbar"],
+    "github": "https://github.com/andrewjharrisportfolio/-Active-Directory-Security-Assessment-with-Splunk-Integration",
+    "category": "THREAT DETECTION",
+    "featured": true
+  },
+  {
+    "name": "Vulnerability Remediation with Nessus",
+    "description": "Deployed Nessus in a Windows VM lab to perform authenticated vulnerability scans, triage findings by severity, and execute a full remediation cycle. Applied patches via Windows Update, enforced Network Message Signing through Group Policy, and re-scanned to confirm vulnerability closure — demonstrating a complete vulnerability management workflow.",
+    "tools": ["Nessus", "Windows Server", "Group Policy", "Patch Management"],
+    "github": "https://github.com/andrewjharrisportfolio/Vulnerability-Remediation-With-Nessus",
+    "category": "VULNERABILITY MANAGEMENT",
+    "featured": false
+  },
+  {
+    "name": "Threaded Port Scanner in Python",
+    "description": "Built a multithreaded TCP port scanner from scratch using Python socket programming and a queue-based thread pool. Scans multiple ports simultaneously for dramatically improved speed over sequential scanning. Handles IP parsing, configurable port ranges, timeout management, and exception handling with clean terminal output.",
+    "tools": ["Python", "Multithreading", "Socket Programming"],
+    "github": "https://github.com/andrewjharrisportfolio/Threaded-Port-Scanner-in-Python",
+    "category": "TOOL DEVELOPMENT",
+    "featured": false
+  },
+  {
+    "name": "MFA Deployment for Active Directory via Duo Security",
+    "description": "Implemented Two-Factor Authentication across an Active Directory environment using Duo Security. Configured Duo groups, enrolled users, set up NTP for time synchronization, applied RDP application protection, and validated push-notification authentication end-to-end — demonstrating IAM hardening in a Windows domain.",
+    "tools": ["Active Directory", "Duo Security", "Windows Server", "Group Policy"],
+    "github": "https://github.com/andrewjharrisportfolio/MFA-Implementation-For-Active-Directory",
+    "category": "IDENTITY & ACCESS",
+    "featured": false
+  },
+  {
+    "name": "pfSense Firewall VM Lab",
+    "description": "Deployed pfSense as a virtualized network security appliance in VMware Workstation to establish network segmentation and traffic control. Configured DHCP, assigned interfaces, validated firewall rule enforcement using Kali Linux as the test client, and accessed the pfSense web console to simulate enterprise perimeter firewall management.",
+    "tools": ["pfSense", "VMware", "Kali Linux", "Network Segmentation"],
+    "github": "https://github.com/andrewjharrisportfolio/pfSense-Firewall-VM-Lab",
+    "category": "NETWORK SECURITY",
+    "featured": true
+  }
+]

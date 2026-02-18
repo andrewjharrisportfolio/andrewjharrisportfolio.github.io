@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certifications — Andrew Harris</title>
+  <meta name="description" content="Verified cybersecurity certifications earned by Andrew Harris — GCIH, GSEC, GFACT, Security+, AZ-500, A+." />
+  <link rel="stylesheet" href="styles.css" />
+  <script>window.PAGE_ID = 'certifications';</script>
+  <script src="site-data.js"></script>
+</head>
+<body>
+
+  <div class="scanline" aria-hidden="true"></div>
+
+  <div class="page-wrapper">
+
+    <!-- ══ NAVIGATION ══════════════════════════════════════ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">[ DREW.SEC ]</a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="training.html">Training &amp; Labs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ══ PAGE HERO ════════════════════════════════════════ -->
+      <header class="page-hero">
+        <p class="page-hero-label">// verify --credentials ./certs/</p>
+        <h1 class="page-hero-title"><span>Certifications</span></h1>
+        <p class="page-hero-desc">
+          6 industry certifications earned in 13 months. Click any badge to verify authenticity on Credly.
+        </p>
+      </header>
+
+      <!-- ══ CERT GRID ════════════════════════════════════════ -->
+      <section class="section" style="padding-top: 1rem;" aria-labelledby="certs-heading">
+        <h2 class="sr-only" id="certs-heading">Certification Badges</h2>
+
+        <!-- Populated by main.js from SITE_DATA.certifications -->
+        <div class="cert-grid" id="cert-grid" role="list" aria-label="Certifications">
+        </div>
+
+      </section>
+
+      <!-- ══ NOTE ═════════════════════════════════════════════ -->
+      <section class="section" style="padding-top: 0;">
+        <div class="about-container" style="max-width: 600px;">
+          <p class="terminal-header">&gt; echo $CERT_STATUS</p>
+          <p class="about-text" style="font-size:0.88rem;">
+            All badges are verifiable through Credly. Clicking any badge above will take you to the official
+            verified credential page where you can confirm the certification is valid, unexpired, and
+            legitimately issued by the certifying body.
+          </p>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══ FOOTER ═══════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <span class="footer-logo">[ DREW.SEC ]</span>
+      <span class="footer-copy">&copy; 2025 Andrew Harris &mdash; Security Operations Analyst</span>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="main.js"></script>
+</body>
+</html>
