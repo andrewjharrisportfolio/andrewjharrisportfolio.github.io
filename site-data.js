@@ -27,7 +27,7 @@ const SITE_DATA = {
   // color options: 'cyan' | 'green' | 'purple'
   // ─────────────────────────────────────────────
   stats: [
-    { value: "150+",  label: "Monthly Security Incidents Handled", color: "cyan"   },
+    { value: "150+",  label: "Monthly Incidents Handled", color: "cyan"   },
     { value: "98.5%", label: "QA Rating",                          color: "green"  },
     { value: "6",     label: "Certifications Earned in 13 Months", color: "purple" }
   ],
@@ -60,19 +60,19 @@ const SITE_DATA = {
       abbr:      "SEC+",
       name:      "CompTIA Security+",
       credlyUrl: "https://www.credly.com/badges/cef8f254-88b9-4935-b002-bdc78cfeb43e/public_url",
-      imageUrl:  "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792c5184a/CompTIA_Security_2Bce.png"
+      imageUrl:  ""
     },
     {
       abbr:      "AZ-500",
       name:      "Microsoft Azure Security Engineer Associate",
       credlyUrl: "https://learn.microsoft.com/api/credentials/share/en-us/AndrewHarris-1272/19DF8BF95AD43DD7?sharingId=C16A570FF06800C4",
-      imageUrl:  "https://images.credly.com/size/340x340/images/336eebfc-0ac3-4583-8a4b-8af602a8b3c8/azure-security-engineer-associate600x600.png"
+      imageUrl:  ""
     },
     {
       abbr:      "A+",
       name:      "CompTIA A+",
       credlyUrl: "https://www.credly.com/badges/a5b29d27-d5aa-4f7e-a623-13806196e91d/linked_in_profile",
-      imageUrl:  "https://images.credly.com/size/340x340/images/f6b43854-b5c3-4317-9395-a55ca71b08de/CompTIA_A_2Bce.png"
+      imageUrl:  ""
     },
     {
       abbr:      "COURSERA",
