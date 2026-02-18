@@ -1,58 +1,50 @@
 [
   {
-    "name": "SIEM Detection Rule Library",
-    "description": "Built a library of 30+ production-ready Splunk detection rules mapped to MITRE ATT&CK techniques. Rules cover credential access, lateral movement, persistence, and exfiltration TTPs. Each rule includes documentation, tuning notes, and false-positive context.",
-    "tools": ["Splunk", "MITRE ATT&CK", "SPL", "Regex"],
-    "github": "https://github.com/andrewjharrisportfolio/siem-detection-rules",
-    "category": "DETECTION ENGINEERING",
-    "featured": true
-  },
-  {
-    "name": "Network Traffic Forensics Lab",
-    "description": "Analyzed a series of PCAP files to reconstruct a multi-stage intrusion: initial reconnaissance, C2 beaconing, data staging, and exfiltration over DNS. Documented IOCs, wrote Snort/Suricata rules to detect each stage, and produced a full kill-chain report.",
-    "tools": ["Wireshark", "Tcpdump", "Suricata", "Snort", "Zeek"],
-    "github": "https://github.com/andrewjharrisportfolio/network-forensics-lab",
+    "name": "PsExec Lateral Movement Hunt — CyberDefenders Lab",
+    "description": "Investigated SMB traffic in a PCAP file to track attacker pivot paths across networked workstations. Identified compromised hosts (HR_PC, SALES-PC, MARKETING-PC), confirmed psexesvc.exe deployment via ADMIN$ and IPC$ shares, and mapped every stage of the attack to MITRE ATT&CK techniques T1021.002, T1570, and T1569.002.",
+    "tools": ["Wireshark", "MITRE ATT&CK"],
+    "github": "https://github.com/andrewjharrisportfolio/PsExec-Hunt-Lab-Cyberdefenders-",
     "category": "NETWORK FORENSICS",
     "featured": true
   },
   {
-    "name": "Phishing Campaign Analysis & Playbook",
-    "description": "Investigated a simulated spear-phishing campaign from initial email delivery through payload execution and persistence. Extracted and sandboxed malicious attachments, pivoted on IOCs across threat intel platforms, and built a repeatable phishing triage playbook.",
-    "tools": ["Email Header Analysis", "VirusTotal", "Any.run", "OSINT Tools", "Splunk"],
-    "github": "https://github.com/andrewjharrisportfolio/phishing-analysis-playbook",
-    "category": "THREAT ANALYSIS",
+    "name": "Active Directory Security Assessment with Splunk Integration",
+    "description": "Built a controlled multi-machine lab (Windows Server DC, Ubuntu Splunk SIEM, Windows 10 target, Kali attacker) to evaluate Active Directory resilience against brute-force attacks. Simulated credential attacks with Crowbar, monitored Event ID 4625 alerts in Splunk, and executed Atomic Red Team test cases mapped to MITRE ATT&CK to validate real-time detection coverage.",
+    "tools": ["Splunk", "Sysmon", "Atomic Red Team", "MITRE ATT&CK", "Kali Linux", "Crowbar"],
+    "github": "https://github.com/andrewjharrisportfolio/-Active-Directory-Security-Assessment-with-Splunk-Integration",
+    "category": "THREAT DETECTION",
     "featured": true
   },
   {
-    "name": "Windows Memory Forensics Investigation",
-    "description": "Performed memory forensics on a compromised Windows endpoint to identify injected shellcode, rogue processes, and attacker tooling living in memory. Used Volatility 3 plugins to enumerate processes, extract artifacts, and map findings to MITRE ATT&CK.",
-    "tools": ["Volatility", "FTK Imager", "Sysinternals", "MITRE ATT&CK"],
-    "github": "https://github.com/andrewjharrisportfolio/memory-forensics-lab",
-    "category": "DIGITAL FORENSICS",
+    "name": "Vulnerability Remediation with Nessus",
+    "description": "Deployed Nessus in a Windows VM lab to perform authenticated vulnerability scans, triage findings by severity, and execute a full remediation cycle. Applied patches via Windows Update, enforced Network Message Signing through Group Policy, and re-scanned to confirm vulnerability closure — demonstrating a complete vulnerability management workflow.",
+    "tools": ["Nessus", "Windows Server", "Group Policy", "Patch Management"],
+    "github": "https://github.com/andrewjharrisportfolio/Vulnerability-Remediation-With-Nessus",
+    "category": "VULNERABILITY MANAGEMENT",
     "featured": false
   },
   {
-    "name": "Azure Sentinel Detection Rules (KQL)",
-    "description": "Developed a set of KQL-based detection rules for Microsoft Sentinel targeting cloud-native attack patterns: impossible travel, privileged role assignments, service principal abuse, and anomalous sign-in behavior. Rules are parameterized for easy threshold tuning.",
-    "tools": ["Azure Sentinel", "KQL", "Microsoft Defender for Cloud", "Azure AD", "MITRE ATT&CK"],
-    "github": "https://github.com/andrewjharrisportfolio/sentinel-kql-detections",
-    "category": "CLOUD SECURITY",
+    "name": "Threaded Port Scanner in Python",
+    "description": "Built a multithreaded TCP port scanner from scratch using Python socket programming and a queue-based thread pool. Scans multiple ports simultaneously for dramatically improved speed over sequential scanning. Handles IP parsing, configurable port ranges, timeout management, and exception handling with clean terminal output.",
+    "tools": ["Python", "Multithreading", "Socket Programming"],
+    "github": "https://github.com/andrewjharrisportfolio/Threaded-Port-Scanner-in-Python",
+    "category": "TOOL DEVELOPMENT",
     "featured": false
   },
   {
-    "name": "Incident Response Runbooks",
-    "description": "Created a collection of structured incident response runbooks for common SOC alert types: ransomware, credential stuffing, beaconing malware, and insider threat indicators. Each runbook follows the PICERL framework with decision trees, escalation paths, and evidence-collection checklists.",
-    "tools": ["Splunk", "TheHive", "MITRE ATT&CK", "NIST", "Markdown"],
-    "github": "https://github.com/andrewjharrisportfolio/ir-runbooks",
-    "category": "INCIDENT RESPONSE",
+    "name": "MFA Deployment for Active Directory via Duo Security",
+    "description": "Implemented Two-Factor Authentication across an Active Directory environment using Duo Security. Configured Duo groups, enrolled users, set up NTP for time synchronization, applied RDP application protection, and validated push-notification authentication end-to-end — demonstrating IAM hardening in a Windows domain.",
+    "tools": ["Active Directory", "Duo Security", "Windows Server", "Group Policy"],
+    "github": "https://github.com/andrewjharrisportfolio/MFA-Implementation-For-Active-Directory",
+    "category": "IDENTITY & ACCESS",
     "featured": false
   },
   {
-    "name": "Threat Hunt: Living-off-the-Land Binaries",
-    "description": "Conducted a hypothesis-driven threat hunt across endpoint telemetry searching for LOLBin abuse (certutil, mshta, regsvr32, wscript). Developed a hunting methodology, documented findings, and converted confirmed TTPs into persistent Splunk scheduled alerts.",
-    "tools": ["Splunk", "SPL", "Sysmon", "MITRE ATT&CK", "PowerShell"],
-    "github": "https://github.com/andrewjharrisportfolio/lolbin-threat-hunt",
-    "category": "THREAT HUNTING",
-    "featured": false
+    "name": "pfSense Firewall VM Lab",
+    "description": "Deployed pfSense as a virtualized network security appliance in VMware Workstation to establish network segmentation and traffic control. Configured DHCP, assigned interfaces, validated firewall rule enforcement using Kali Linux as the test client, and accessed the pfSense web console to simulate enterprise perimeter firewall management.",
+    "tools": ["pfSense", "VMware", "Kali Linux", "Network Segmentation"],
+    "github": "https://github.com/andrewjharrisportfolio/pfSense-Firewall-VM-Lab",
+    "category": "NETWORK SECURITY",
+    "featured": true
   }
 ]

@@ -252,17 +252,29 @@ const TAG_CLASS_MAP = {
   'Suricata': 'tag-network', 'Snort': 'tag-network', 'Nmap': 'tag-network',
   'Netcat': 'tag-network', 'Zeek/Bro': 'tag-network',
 
-  // Forensics / Malware → purple
+  // Forensics / Malware / Vuln scanning → purple
   'Volatility': 'tag-forensic', 'FTK Imager': 'tag-forensic',
   'Autopsy': 'tag-forensic', 'Sysinternals': 'tag-forensic',
   'YARA': 'tag-forensic', 'Any.run': 'tag-forensic',
   'VirusTotal': 'tag-forensic', 'Sandbox': 'tag-forensic',
   'Email Header Analysis': 'tag-forensic',
+  'Nessus': 'tag-forensic', 'Patch Management': 'tag-forensic',
 
-  // Threat intel / Attack frameworks → red
+  // Threat intel / Attack frameworks / Offensive tools → red
   'MITRE ATT&CK': 'tag-threat', 'Metasploit': 'tag-threat',
   'OSINT Tools': 'tag-threat', 'Threat Intelligence Feeds': 'tag-threat',
   'TheHive': 'tag-threat', 'EDR': 'tag-threat',
+  'Atomic Red Team': 'tag-threat', 'Kali Linux': 'tag-threat',
+  'Crowbar': 'tag-threat',
+
+  // Network / Infrastructure → green
+  'pfSense': 'tag-network', 'Network Segmentation': 'tag-network',
+  'VMware': 'tag-network',
+
+  // Monitoring / Endpoint → cyan (SIEM family)
+  'Sysmon': 'tag-siem',
+
+  // Identity & Access / Windows infra → default (handled below)
 };
 
 function getTagClass(tool) {
