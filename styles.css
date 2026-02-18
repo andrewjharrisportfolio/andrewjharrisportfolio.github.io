@@ -668,6 +668,19 @@ main { flex: 1; }
   box-shadow: 0 0 25px rgba(0,229,255,0.3);
 }
 
+/* Real badge image — fills the circle */
+.cert-badge-img {
+  width: 88px;
+  height: 88px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: block;
+  transition: filter 0.3s;
+}
+.cert-card:hover .cert-badge-img {
+  filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.5));
+}
+
 .cert-abbr {
   font-family: var(--font-mono);
   font-size: 0.85rem;

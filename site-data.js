@@ -40,32 +40,46 @@ const SITE_DATA = {
     {
       abbr:      "GCIH",
       name:      "GIAC Certified Incident Handler",
-      credlyUrl: "https://www.credly.com/badges/your-gcih-badge-id"
+      credlyUrl: "https://www.credly.com/badges/dc34fc75-1556-4f63-8e67-1248d0678880/public_url",
+      // ↓ Paste your Credly badge image URL here (right-click badge on Credly → Copy Image Address)
+      imageUrl:  ""
     },
     {
       abbr:      "GSEC",
       name:      "GIAC Security Essentials",
-      credlyUrl: "https://www.credly.com/badges/your-gsec-badge-id"
+      credlyUrl: "https://www.credly.com/earner/earned/badge/9e242398-4604-430a-839b-4a78bcb2d2f0",
+      imageUrl:  ""
     },
     {
       abbr:      "GFACT",
       name:      "GIAC Foundational Cybersecurity Technologies",
-      credlyUrl: "https://www.credly.com/badges/your-gfact-badge-id"
+      credlyUrl: "https://www.credly.com/badges/42812ab8-5637-4544-90b3-01ce70d81969/public_url",
+      imageUrl:  ""
     },
     {
       abbr:      "SEC+",
       name:      "CompTIA Security+",
-      credlyUrl: "https://www.credly.com/badges/your-secplus-badge-id"
+      credlyUrl: "https://www.credly.com/badges/74fbf669-fe87-4733-ac17-076db3929e92/linked_in_profile",
+      imageUrl:  "https://images.credly.com/size/340x340/images/74790a75-8451-400a-8536-92d792c5184a/CompTIA_Security_2Bce.png"
     },
     {
       abbr:      "AZ-500",
       name:      "Microsoft Azure Security Engineer Associate",
-      credlyUrl: "https://www.credly.com/badges/your-az500-badge-id"
+      credlyUrl: "https://www.credly.com/badges/cef8f254-88b9-4935-b002-bdc78cfeb43e/public_url",
+      imageUrl:  "https://images.credly.com/size/340x340/images/336eebfc-0ac3-4583-8a4b-8af602a8b3c8/azure-security-engineer-associate600x600.png"
     },
     {
       abbr:      "A+",
       name:      "CompTIA A+",
-      credlyUrl: "https://www.credly.com/badges/your-aplus-badge-id"
+      credlyUrl: "https://www.credly.com/badges/a5b29d27-d5aa-4f7e-a623-13806196e91d/linked_in_profile",
+      imageUrl:  "https://images.credly.com/size/340x340/images/f6b43854-b5c3-4317-9395-a55ca71b08de/CompTIA_A_2Bce.png"
+    },
+    {
+      abbr:      "COURSERA",
+      name:      "Coursera Specialization Certificate",
+      // ↓ Update the name above once you confirm the specialization title
+      credlyUrl: "https://www.coursera.org/account/accomplishments/specialization/BLQDDUYC79C8",
+      imageUrl:  ""
     }
   ],
 

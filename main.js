@@ -438,12 +438,21 @@ function initCertificationsPage() {
     a.href      = cert.credlyUrl;
     a.target    = '_blank';
     a.rel       = 'noopener';
+
+    // Use real badge image if imageUrl is set, otherwise fall back to abbr text
+    const badgeInner = cert.imageUrl
+      ? `<img class="cert-badge-img" src="${cert.imageUrl}" alt="${cert.name} badge" loading="lazy" />`
+      : `<span class="cert-abbr">${cert.abbr}</span>`;
+
+    // Coursera certs link to a verify page, not Credly
+    const verifyLabel = cert.credlyUrl.includes('coursera.org')
+      ? 'Verify on Coursera ↗'
+      : 'Verify on Credly ↗';
+
     a.innerHTML = `
-      <div class="cert-badge-circle">
-        <span class="cert-abbr">${cert.abbr}</span>
-      </div>
+      <div class="cert-badge-circle">${badgeInner}</div>
       <span class="cert-name">${cert.name}</span>
-      <span class="cert-verify-label">Verify on Credly ↗</span>
+      <span class="cert-verify-label">${verifyLabel}</span>
     `;
     grid.appendChild(a);
   });
