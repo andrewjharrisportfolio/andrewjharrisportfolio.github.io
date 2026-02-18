@@ -113,6 +113,11 @@ const SITE_DATA = {
       description: "Simulated real-world SOC workflows including alert triage, malware sandbox analysis, phishing investigation, and incident escalation. Developed structured investigation habits aligned with NIST and PICERL incident response frameworks."
     },
     {
+      name: "Blue Cape Security — DFIR Foundations and Techniques",
+      tools: ["Wireshark", "Splunk", "Volatility3", "CyberChef", "Eric Zimmerman's Tools", "MITRE ATT&CK"],
+      description: "8-hour instructor-led bootcamp covering core Digital Forensics and Incident Response methodologies. Topics included incident response procedures, data collection techniques, applied forensic analysis, and essential DFIR tooling. Completed course assessment with 84%, identifying key strengths and areas for continued growth. Applied coursework hands-on through a self-built lab environment to analyze a real attack scenario — tracing a full intrusion chain from initial phishing through C2 beaconing, persistence, and data exfiltration, mapped to the MITRE ATT&CK framework."
+    },
+    {
       name: "Microsoft Azure — Security & Identity Labs (AZ-500 Prep)",
       tools: ["Azure Security Center", "Microsoft Defender for Cloud", "Azure Sentinel", "Azure AD", "Key Vault"],
       description: "Completed hands-on Azure lab exercises covering identity protection, just-in-time VM access, threat protection policies, and cloud SIEM configuration using Microsoft Sentinel. Practiced securing cloud workloads in alignment with the Azure Security Benchmark."
