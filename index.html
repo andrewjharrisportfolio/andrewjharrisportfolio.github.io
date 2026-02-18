@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Andrew Harris — Security Operations Analyst</title>
+  <meta name="description" content="Cybersecurity portfolio of Andrew Harris — SOC Analyst & Detection Engineer specializing in SIEM, threat detection, and incident response." />
+  <link rel="stylesheet" href="styles.css" />
+  <!-- PAGE_ID tells main.js which page initializer to run -->
+  <script>window.PAGE_ID = 'home';</script>
+  <script src="site-data.js"></script>
+</head>
+<body>
+
+  <!-- Scan-line beam overlay -->
+  <div class="scanline" aria-hidden="true"></div>
+
+  <div class="page-wrapper">
+
+    <!-- ══ NAVIGATION ══════════════════════════════════════ -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo">[ DREW.SEC ]</a>
+      <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="training.html">Training &amp; Labs</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+
+      <!-- ══ HERO ═══════════════════════════════════════════ -->
+      <section class="hero" aria-labelledby="hero-name">
+        <div class="hero-inner">
+          <!-- Corner bracket decorations (HUD feel) -->
+          <div class="hero-corner-tl" aria-hidden="true"></div>
+          <div class="hero-corner-br" aria-hidden="true"></div>
+
+          <p class="hero-label">// Security Operations &amp; Detection Engineering</p>
+
+          <h1 class="hero-name" id="hero-name">Andrew Harris</h1>
+
+          <div class="hero-title-wrap">
+            <div class="status-dot" aria-hidden="true"></div>
+            <p class="hero-title" id="hero-title">Security Operations Analyst &amp; Detection Engineer</p>
+          </div>
+
+          <!-- Terminal-style tagline -->
+          <div class="terminal-block" role="doc-subtitle">
+            <span id="hero-tagline">Detecting threats. Engineering detections. Closing the gap between noise and signal.</span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ══ ABOUT ═══════════════════════════════════════════ -->
+      <section class="section" aria-labelledby="about-heading">
+        <div class="section-header">
+          <span class="section-num" aria-hidden="true">01</span>
+          <h2 class="section-title" id="about-heading">About <span>Me</span></h2>
+        </div>
+        <div class="about-container">
+          <p class="terminal-header">&gt; cat about.txt</p>
+          <p class="about-text" id="about-text">Loading...</p>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══ STATS ═══════════════════════════════════════════ -->
+      <section class="section" aria-labelledby="stats-heading">
+        <div class="section-header">
+          <span class="section-num" aria-hidden="true">02</span>
+          <h2 class="section-title" id="stats-heading">By the <span>Numbers</span></h2>
+        </div>
+        <div class="stats-bar" id="stats-bar" role="list" aria-label="Key statistics">
+          <!-- Injected by main.js from SITE_DATA.stats -->
+          <div class="stat-card" data-color="cyan">
+            <div class="stat-value">150+</div>
+            <div class="stat-label">Monthly Security Incidents Handled</div>
+          </div>
+          <div class="stat-card" data-color="green">
+            <div class="stat-value">98.5%</div>
+            <div class="stat-label">QA Rating</div>
+          </div>
+          <div class="stat-card" data-color="purple">
+            <div class="stat-value">6</div>
+            <div class="stat-label">Certifications Earned in 13 Months</div>
+          </div>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══ FEATURED PROJECTS ════════════════════════════════ -->
+      <section class="section" aria-labelledby="featured-heading">
+        <div class="section-header">
+          <span class="section-num" aria-hidden="true">03</span>
+          <h2 class="section-title" id="featured-heading">Featured <span>Projects</span></h2>
+        </div>
+
+        <!-- Horizontal scrollable row — filled by main.js -->
+        <div class="featured-row" id="featured-projects" role="list" aria-label="Featured projects">
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="projects.html" style="
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--cyan);
+            border: 1px solid rgba(0,229,255,0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: box-shadow 0.2s, background 0.2s;
+          "
+          onmouseover="this.style.boxShadow='0 0 20px rgba(0,229,255,0.35)';this.style.background='rgba(0,229,255,0.06)'"
+          onmouseout="this.style.boxShadow='';this.style.background=''"
+          >// View All Projects &rarr;</a>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- ══ FOOTER ═══════════════════════════════════════════ -->
+    <footer class="footer" role="contentinfo">
+      <span class="footer-logo">[ DREW.SEC ]</span>
+      <span class="footer-copy">&copy; 2025 Andrew Harris &mdash; Security Operations Analyst</span>
+    </footer>
+
+  </div><!-- /.page-wrapper -->
+
+  <script src="main.js"></script>
+</body>
+</html>
