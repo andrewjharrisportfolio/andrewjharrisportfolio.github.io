@@ -755,6 +755,98 @@ main { flex: 1; }
   flex: 1;
 }
 
+/* ── Write-Up Cards ───────────────────────────────────────── */
+.writeup-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 1.5rem;
+}
+
+.writeup-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--cyan); /* overridden per-card by JS */
+  border-radius: 10px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.writeup-card:hover {
+  transform: translateY(-4px);
+  /* box-shadow set by JS to match category color */
+}
+
+.writeup-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.writeup-category {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: 3px;
+  border: 1px solid;
+  /* color, border-color, background set by JS */
+}
+
+.writeup-date {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+.writeup-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.writeup-summary {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.writeup-read-more {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--cyan); /* overridden by JS */
+  opacity: 0.7;
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--border-dim);
+  transition: opacity 0.2s;
+  display: block;
+}
+
+.writeup-card:hover .writeup-read-more { opacity: 1; }
+
+.writeup-empty {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  padding: 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
 /* ── Contact Page ─────────────────────────────────────────── */
 .contact-section {
   min-height: calc(100vh - var(--nav-h) - 80px);

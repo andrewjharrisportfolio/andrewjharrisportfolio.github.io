@@ -241,6 +241,20 @@ document.addEventListener('DOMContentLoaded', () => {
    Maps tool names to CSS tag color classes
    ═══════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════
+   WRITE-UP CATEGORY COLOR MAP
+   Maps category names to hex and rgba values for card theming
+   ═══════════════════════════════════════════════════════════ */
+
+const CATEGORY_COLOR_MAP = {
+  'DFIR':                  { hex: '#b24dff', rgba: 'rgba(178,77,255,' },
+  'Malware Analysis':      { hex: '#ff3d5a', rgba: 'rgba(255,61,90,'  },
+  'Threat Hunting':        { hex: '#00e5ff', rgba: 'rgba(0,229,255,'  },
+  'Incident Response':     { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+  'Detection Engineering': { hex: '#00e5ff', rgba: 'rgba(0,229,255,'  },
+  'SOC Analysis':          { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+};
+
 const TAG_CLASS_MAP = {
   // SIEM / Log tools → cyan
   'Splunk': 'tag-siem', 'SPL': 'tag-siem', 'Azure Sentinel': 'tag-siem',
@@ -509,7 +523,63 @@ function initTrainingPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   9. CONTACT PAGE
+   9. WRITE-UPS PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function buildWriteupCard(entry) {
+  const cat = CATEGORY_COLOR_MAP[entry.category] || { hex: '#00e5ff', rgba: 'rgba(0,229,255,' };
+
+  const card = document.createElement('a');
+  card.className = 'writeup-card';
+  card.href      = entry.url;
+  card.target    = '_blank';
+  card.rel       = 'noopener';
+  card.setAttribute('role', 'listitem');
+  card.style.borderTopColor = cat.hex;
+
+  const tagsHTML = entry.tools
+    .map(t => `<span class="tag ${getTagClass(t)}">${t}</span>`)
+    .join('');
+
+  card.innerHTML = `
+    <div class="writeup-card-header">
+      <span class="writeup-category" style="color:${cat.hex};border-color:${cat.rgba}0.3);background:${cat.rgba}0.06)">${entry.category}</span>
+      <span class="writeup-date">${entry.date}</span>
+    </div>
+    <h3 class="writeup-title">${entry.title}</h3>
+    <p class="writeup-summary">${entry.summary}</p>
+    <div class="card-tags">${tagsHTML}</div>
+    <span class="writeup-read-more" style="color:${cat.hex}">Read Write-Up &rarr;</span>
+  `;
+
+  card.addEventListener('mouseenter', () => {
+    card.style.boxShadow  = `0 8px 30px ${cat.rgba}0.18), 0 0 0 1px ${cat.rgba}0.25)`;
+    card.style.borderColor = `${cat.rgba}0.3)`;
+    card.style.borderTopColor = cat.hex;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.boxShadow   = '';
+    card.style.borderColor = '';
+    card.style.borderTopColor = cat.hex;
+  });
+
+  return card;
+}
+
+function initWriteupsPage() {
+  const grid = document.getElementById('writeup-grid');
+  if (!grid || typeof SITE_DATA === 'undefined') return;
+
+  if (!SITE_DATA.writeups || SITE_DATA.writeups.length === 0) {
+    grid.innerHTML = `<p class="writeup-empty">// No write-ups published yet — check back soon.</p>`;
+    return;
+  }
+
+  SITE_DATA.writeups.forEach(entry => grid.appendChild(buildWriteupCard(entry)));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   10. CONTACT PAGE
    ═══════════════════════════════════════════════════════════ */
 
 function initContactPage() {
@@ -554,17 +624,18 @@ function initContactPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   10. PAGE ROUTER
+   11. PAGE ROUTER
    Called by DOMContentLoaded in the nav init block above.
    Each HTML page sets window.PAGE_ID before loading main.js
    ═══════════════════════════════════════════════════════════ */
 
 function pageInit() {
   switch (window.PAGE_ID) {
-    case 'home':          initHomePage();          break;
-    case 'projects':      initProjectsPage();      break;
+    case 'home':           initHomePage();           break;
+    case 'projects':       initProjectsPage();       break;
+    case 'writeups':       initWriteupsPage();       break;
     case 'certifications': initCertificationsPage(); break;
-    case 'training':      initTrainingPage();      break;
-    case 'contact':       initContactPage();       break;
+    case 'training':       initTrainingPage();       break;
+    case 'contact':        initContactPage();        break;
   }
 }

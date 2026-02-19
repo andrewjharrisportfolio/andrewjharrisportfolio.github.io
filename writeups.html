@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Andrew Harris</title>
-  <meta name="description" content="Get in touch with Andrew Harris — Security Operations Analyst & Detection Engineer open to SOC and Detection Engineering roles." />
+  <title>Write-Ups — Andrew Harris</title>
+  <meta name="description" content="Cybersecurity investigation write-ups, case studies, and technical analyses by Andrew Harris — DFIR, malware analysis, threat hunting, and detection engineering." />
   <link rel="stylesheet" href="styles.css" />
-  <script>window.PAGE_ID = 'contact';</script>
+  <script>window.PAGE_ID = 'writeups';</script>
   <script src="site-data.js"></script>
 </head>
 <body>
@@ -31,28 +31,24 @@
 
     <main>
 
-      <!-- ══ CONTACT SECTION ══════════════════════════════════ -->
-      <section class="contact-section" aria-labelledby="contact-title">
-        <div class="contact-inner">
+      <!-- ══ PAGE HERO ════════════════════════════════════════ -->
+      <header class="page-hero">
+        <p class="page-hero-label">// cat investigation_log.txt</p>
+        <h1 class="page-hero-title">Investigation <span>Write-Ups</span></h1>
+        <p class="page-hero-desc">
+          Detailed technical analyses, case studies, and post-incident reviews.
+          Each write-up documents a real investigation or research exercise — methodology, tooling, and findings included.
+        </p>
+      </header>
 
-          <h1 class="contact-title" id="contact-title">LET'S CONNECT</h1>
+      <!-- ══ WRITE-UPS GRID ════════════════════════════════════ -->
+      <section class="section" style="padding-top: 1rem;" aria-labelledby="writeups-heading">
+        <h2 class="sr-only" id="writeups-heading">Investigation Write-Ups</h2>
 
-          <div class="contact-subtitle">
-            <div class="status-dot" aria-hidden="true"></div>
-            <span>Open to SOC Analyst &amp; Detection Engineering roles</span>
-          </div>
-
-          <!-- Contact link buttons — populated by main.js from SITE_DATA.contact -->
-          <nav class="contact-links" id="contact-links" aria-label="Contact links">
-            <!-- Populated by main.js -->
-          </nav>
-
-          <!-- Decorative terminal note -->
-          <div class="terminal-block" style="width:100%;text-align:left;font-size:0.8rem;opacity:0.6;">
-            <span>// Response time: &lt; 24h &nbsp;|&nbsp; Location: Remote-ready &nbsp;|&nbsp; Clearance: Available upon request</span>
-          </div>
-
+        <!-- Populated by main.js from SITE_DATA.writeups -->
+        <div class="writeup-grid" id="writeup-grid" role="list" aria-label="Write-ups">
         </div>
+
       </section>
 
     </main>

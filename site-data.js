@@ -118,6 +118,23 @@ const SITE_DATA = {
   ],
 
   // ─────────────────────────────────────────────
+  // WRITE-UPS — writeups.html
+  // Each entry: title, summary, date (display string), category, tools (array), url
+  // Categories: 'DFIR' | 'Malware Analysis' | 'Threat Hunting' | 'Incident Response' | 'Detection Engineering' | 'SOC Analysis'
+  // ─────────────────────────────────────────────
+  writeups: [
+    // ↓ Add your write-up entries here. Example entry shown below — replace or remove as needed.
+    // {
+    //   title:    "Write-Up Title",
+    //   summary:  "Short description of what the write-up covers.",
+    //   date:     "Jan 1, 2025",
+    //   category: "DFIR",
+    //   tools:    ["Wireshark", "Splunk", "Volatility"],
+    //   url:      "https://github.com/..."
+    // }
+  ],
+
+  // ─────────────────────────────────────────────
   // CONTACT — contact.html
   // ─────────────────────────────────────────────
   contact: {
