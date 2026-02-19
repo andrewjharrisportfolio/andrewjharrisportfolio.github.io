@@ -288,7 +288,7 @@ const TAG_CLASS_MAP = {
   'VMware': 'tag-network',
 
   // Monitoring / Endpoint → cyan (SIEM family)
-  'Sysmon': 'tag-siem',
+  'Sysmon': 'tag-siem', 'PowerShell': 'tag-siem', 'Linux CLI': 'tag-siem',
 
   // Identity & Access / Windows infra → default (handled below)
 };
