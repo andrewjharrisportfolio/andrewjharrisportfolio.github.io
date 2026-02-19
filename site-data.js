@@ -20,7 +20,7 @@ const SITE_DATA = {
   // ─────────────────────────────────────────────
   // ABOUT — index.html "cat about.txt" section
   // ─────────────────────────────────────────────
-  about: `I'm a Security Operations Analyst and Detection Engineer with hands-on experience triaging 150+ security incidents per month across enterprise SIEM environments. I specialize in building high-fidelity detection rules, reducing false-positive noise, and translating threat intelligence into actionable alerts. My work bridges the gap between raw log data and meaningful, response-ready detections — helping security teams move faster and smarter. With 6 certifications earned in under 13 months and a 98.5% QA rating, I bring both the technical depth and the discipline that modern SOC environments demand.`,
+  about: `I'm a cybersecurity professional transitioning from IT support into Security Operations, with 2.5 years of enterprise experience and six certifications earned in 13 months—including GIAC GCIH and GSEC. I specialize in threat detection and incident investigation, analyzing security alerts using SIEM correlation, network traffic analysis, and malware investigation techniques. My home lab work focuses on understanding attacker behavior through hands-on projects—using Wireshark for protocol analysis, Volatility for memory forensics, and KQL for threat hunting in Microsoft Sentinel. With a 98.5% QA rating in my current role and practical experience applying the MITRE ATT&CK framework, I bring both the technical foundation and the work ethic that modern SOC environments demand.`,
 
   // ─────────────────────────────────────────────
   // STATS — index.html stats bar
