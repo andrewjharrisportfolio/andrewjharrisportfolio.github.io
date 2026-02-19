@@ -89,11 +89,13 @@ const SITE_DATA = {
   training: [
     {
       name: "SANS SEC504 — Hacker Tools, Techniques & Incident Handling",
+      featured: true,
       tools: ["Wireshark", "Tcpdump", "Netcat", "Metasploit", "Nmap", "Volatility"],
       description: "Completed SANS SEC504 coursework covering attacker methodologies, live exploitation techniques, and structured incident response workflows. Applied packet capture analysis with Wireshark and tcpdump, performed memory forensics with Volatility, and practiced containment and eradication procedures across a range of attack scenarios."
     },
     {
       name: "SANS SEC401 — Security Essentials: Network, Endpoint & Cloud",
+      featured: true,
       tools: ["Splunk", "Zeek", "Suricata", "PowerShell", "Linux CLI", "Nmap"],
       description: "Covered foundational and advanced defensive security concepts including network traffic analysis, endpoint hardening, and cloud security principles. Used Zeek and Suricata for network-based detection, Splunk for log aggregation and alerting, and PowerShell for Windows endpoint investigation."
     },
@@ -104,6 +106,7 @@ const SITE_DATA = {
     },
     {
       name: "Blue Cape Security — DFIR Foundations and Techniques",
+      featured: true,
       tools: ["Wireshark", "Splunk", "Volatility3", "CyberChef", "Eric Zimmerman's Tools", "MITRE ATT&CK"],
       description: "8-hour instructor-led bootcamp covering core Digital Forensics and Incident Response methodologies. Topics included incident response procedures, data collection techniques, applied forensic analysis, and essential DFIR tooling. Completed course assessment with 84%, identifying key strengths and areas for continued growth. Applied coursework hands-on through a self-built lab environment to analyze a real attack scenario — tracing a full intrusion chain from initial phishing through C2 beaconing, persistence, and data exfiltration, mapped to the MITRE ATT&CK framework."
     },

@@ -361,6 +361,25 @@ function initHomePage() {
 
     const heroTagline = document.getElementById('hero-tagline');
     if (heroTagline) heroTagline.textContent = SITE_DATA.hero.tagline;
+
+    // Inject featured training
+    const trainingContainer = document.getElementById('featured-training');
+    if (trainingContainer) {
+      const featured = SITE_DATA.training.filter(t => t.featured);
+      featured.forEach(entry => {
+        const card = document.createElement('div');
+        card.className = 'training-card';
+        const tagsHTML = entry.tools
+          .map(t => `<span class="tag ${getTagClass(t)}">${t}</span>`)
+          .join('');
+        card.innerHTML = `
+          <h3 class="training-name">${entry.name}</h3>
+          <div class="card-tags">${tagsHTML}</div>
+          <p class="training-desc">${entry.description}</p>
+        `;
+        trainingContainer.appendChild(card);
+      });
+    }
   }
 }
 
