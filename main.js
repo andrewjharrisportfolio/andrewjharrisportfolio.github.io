@@ -253,6 +253,7 @@ const CATEGORY_COLOR_MAP = {
   'Incident Response':     { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
   'Detection Engineering': { hex: '#00e5ff', rgba: 'rgba(0,229,255,'  },
   'SOC Analysis':          { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+  'Career':                { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
 };
 
 const TAG_CLASS_MAP = {

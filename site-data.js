@@ -120,7 +120,7 @@ const SITE_DATA = {
   // ─────────────────────────────────────────────
   // WRITE-UPS — writeups.html
   // Each entry: title, summary, date (display string), category, tools (array), url
-  // Categories: 'DFIR' | 'Malware Analysis' | 'Threat Hunting' | 'Incident Response' | 'Detection Engineering' | 'SOC Analysis'
+  // Categories: 'DFIR' | 'Malware Analysis' | 'Threat Hunting' | 'Incident Response' | 'Detection Engineering' | 'SOC Analysis' | 'Career'
   // ─────────────────────────────────────────────
   writeups: [
     // ↓ Add your write-up entries here. Example entry shown below — replace or remove as needed.
@@ -132,6 +132,14 @@ const SITE_DATA = {
     //   tools:    ["Wireshark", "Splunk", "Volatility"],
     //   url:      "https://github.com/..."
     // }
+    {
+      title:    "From Rejection to Resilience: My Journey Through the SANS Cyber Diversity Academy",
+      summary:  "A candid account of navigating rejection and finding a path forward through the SANS Cyber Diversity Academy — covering the application process, what the program offers, and the lessons learned about persistence, community, and growth in the cybersecurity field.",
+      date:     "Feb 2026",
+      category: "Career",
+      tools:    [],
+      url:      "https://www.linkedin.com/pulse/from-rejection-resilience-my-journey-through-sans-cyber-andrew-harris-50tte"
+    },
     {
       title:    "14 Days of PowerShell: From Exposure to Execution",
       summary:  "A 14-day structured deep-dive into PowerShell for security practitioners — covering core syntax, scripting fundamentals, and security-relevant techniques including enumeration, automation, and execution methods commonly encountered in both attacker TTPs and defensive SOC workflows.",
