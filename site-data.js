@@ -12,7 +12,7 @@ const SITE_DATA = {
   // ─────────────────────────────────────────────
   hero: {
     name: "Andrew Harris",
-    title: "Security Operations Analyst & Detection Engineer",
+    title: "Security Operations Analyst & IT Professional",
     // Displayed inside the terminal-style tagline block
     tagline: "Detecting threats. Engineering detections. Closing the gap between noise and signal."
   },
@@ -165,9 +165,9 @@ const SITE_DATA = {
   // CONTACT — contact.html
   // ─────────────────────────────────────────────
   contact: {
-    email:    "andrewjharris@protonmail.com",
-    linkedin: "https://www.linkedin.com/in/andrewjharris-sec/",
-    github:   "https://github.com/andrewjharrisportfolio"
+    email:    "andrewjharris12@gmail.com",
+    linkedin: "https://www.linkedin.com/in/andrewjharris8/",
+    github:   "https://github.com/andrewjharrisportfolio/MyCyberPortfolio"
   }
 
 };
