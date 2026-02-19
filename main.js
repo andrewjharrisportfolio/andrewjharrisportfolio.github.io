@@ -379,6 +379,13 @@ function initHomePage() {
     const heroTagline = document.getElementById('hero-tagline');
     if (heroTagline) heroTagline.textContent = SITE_DATA.hero.tagline;
 
+    // Inject featured write-ups
+    const writeupsContainer = document.getElementById('featured-writeups');
+    if (writeupsContainer) {
+      const featured = (SITE_DATA.writeups || []).filter(w => w.featured);
+      featured.forEach(entry => writeupsContainer.appendChild(buildWriteupCard(entry)));
+    }
+
     // Inject featured training
     const trainingContainer = document.getElementById('featured-training');
     if (trainingContainer) {

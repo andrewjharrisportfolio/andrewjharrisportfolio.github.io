@@ -137,6 +137,7 @@ const SITE_DATA = {
       summary:  "A candid account of navigating rejection and finding a path forward through the SANS Cyber Diversity Academy — covering the application process, what the program offers, and the lessons learned about persistence, community, and growth in the cybersecurity field.",
       date:     "Feb 2026",
       category: "Career",
+      featured: true,
       tools:    [],
       url:      "https://www.linkedin.com/pulse/from-rejection-resilience-my-journey-through-sans-cyber-andrew-harris-50tte"
     },
@@ -145,6 +146,7 @@ const SITE_DATA = {
       summary:  "A 14-day structured deep-dive into PowerShell for security practitioners — covering core syntax, scripting fundamentals, and security-relevant techniques including enumeration, automation, and execution methods commonly encountered in both attacker TTPs and defensive SOC workflows.",
       date:     "Feb 2026",
       category: "Detection Engineering",
+      featured: true,
       tools:    ["PowerShell"],
       url:      "https://www.linkedin.com/pulse/14-days-powershell-from-exposure-execution-andrew-harris-wjnpc/"
     },
@@ -153,6 +155,7 @@ const SITE_DATA = {
       summary:  "Full intrusion chain analysis tracing an attacker from initial phishing email through credential harvesting, C2 beaconing, persistence, and data exfiltration. Applied core DFIR methodology using packet analysis, memory forensics, and log investigation, with the complete attack chain mapped to the MITRE ATT&CK framework.",
       date:     "Feb 2026",
       category: "DFIR",
+      featured: true,
       tools:    ["Wireshark", "Splunk", "Volatility3", "Strings"],
       url:      "https://www.linkedin.com/pulse/from-click-compromise-dfir-foundations-techniques-write-up-harris-e0fsc"
     }
