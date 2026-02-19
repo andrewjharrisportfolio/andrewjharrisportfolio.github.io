@@ -267,7 +267,9 @@ const TAG_CLASS_MAP = {
   'Netcat': 'tag-network', 'Zeek/Bro': 'tag-network',
 
   // Forensics / Malware / Vuln scanning → purple
-  'Volatility': 'tag-forensic', 'FTK Imager': 'tag-forensic',
+  'Volatility': 'tag-forensic', 'Volatility3': 'tag-forensic',
+  'Strings': 'tag-forensic',
+  'FTK Imager': 'tag-forensic',
   'Autopsy': 'tag-forensic', 'Sysinternals': 'tag-forensic',
   'YARA': 'tag-forensic', 'Any.run': 'tag-forensic',
   'VirusTotal': 'tag-forensic', 'Sandbox': 'tag-forensic',

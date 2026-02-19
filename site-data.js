@@ -132,6 +132,14 @@ const SITE_DATA = {
     //   tools:    ["Wireshark", "Splunk", "Volatility"],
     //   url:      "https://github.com/..."
     // }
+    {
+      title:    "From Click to Compromise — DFIR Foundations and Techniques Write-Up",
+      summary:  "Full intrusion chain analysis tracing an attacker from initial phishing email through credential harvesting, C2 beaconing, persistence, and data exfiltration. Applied core DFIR methodology using packet analysis, memory forensics, and log investigation, with the complete attack chain mapped to the MITRE ATT&CK framework.",
+      date:     "Feb 2026",
+      category: "DFIR",
+      tools:    ["Wireshark", "Splunk", "Volatility3", "Strings"],
+      url:      "https://www.linkedin.com/pulse/from-click-compromise-dfir-foundations-techniques-write-up-harris-e0fsc"
+    }
   ],
 
   // ─────────────────────────────────────────────
