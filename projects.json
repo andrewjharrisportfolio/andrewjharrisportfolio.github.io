@@ -1,5 +1,13 @@
 [
   {
+    "name": "Azure Honeypot — Real-World Threat Detection & Hardening (Microsoft Sentinel)",
+    "description": "Deployed an intentionally misconfigured Windows Server VM in Azure to capture live attack traffic. Recorded 231,396 brute force attempts and 231,395 NTLM credential validation attempts from 8+ countries within 12 hours. Built KQL detection queries in Microsoft Sentinel mapped to MITRE ATT&CK framework. Deployed a honeytoken to detect post-exploitation behavior. Hardened the environment using NIST CSF 1.1 controls reducing failed logons to zero. Implemented SOAR automation via Azure Logic Apps triggering email alerts on brute force incidents.",
+    "tools": ["Microsoft Azure", "Microsoft Sentinel", "KQL", "Azure Logic Apps", "NIST Cybersecurity Framework (CSF)", "GeoIP Watchlist", "Shodan", "Windows Remote Desktop Client", "Microsoft Log Analytics workspace", "WinRAR"],
+    "github": "https://github.com/andrewjharrisportfolio/Azure-Honeypot-Real-World-Threat-Detection-with-Microsoft-Sentinel/blob/main/README.md",
+    "category": "CLOUD DETECTION",
+    "featured": true
+  },
+  {
     "name": "PsExec Lateral Movement Hunt — CyberDefenders Lab",
     "description": "Investigated SMB traffic in a PCAP file to track attacker pivot paths across networked workstations. Identified compromised hosts (HR_PC, SALES-PC, MARKETING-PC), confirmed psexesvc.exe deployment via ADMIN$ and IPC$ shares, and mapped every stage of the attack to MITRE ATT&CK techniques T1021.002, T1570, and T1569.002.",
     "tools": ["Wireshark", "MITRE ATT&CK"],

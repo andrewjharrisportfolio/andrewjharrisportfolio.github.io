@@ -277,12 +277,19 @@ const TAG_CLASS_MAP = {
   'Email Header Analysis': 'tag-forensic',
   'Nessus': 'tag-forensic', 'Patch Management': 'tag-forensic',
 
+  // Cloud / Azure → cyan (SIEM family)
+  'Microsoft Azure': 'tag-siem', 'Microsoft Sentinel': 'tag-siem',
+  'Azure Logic Apps': 'tag-siem', 'Microsoft Log Analytics workspace': 'tag-siem',
+  'Windows Remote Desktop Client': 'tag-default',
+
   // Threat intel / Attack frameworks / Offensive tools → red
   'MITRE ATT&CK': 'tag-threat', 'Metasploit': 'tag-threat',
   'OSINT Tools': 'tag-threat', 'Threat Intelligence Feeds': 'tag-threat',
   'TheHive': 'tag-threat', 'EDR': 'tag-threat',
   'Atomic Red Team': 'tag-threat', 'Kali Linux': 'tag-threat',
   'Crowbar': 'tag-threat',
+  'Shodan': 'tag-threat', 'GeoIP Watchlist': 'tag-threat',
+  'NIST Cybersecurity Framework (CSF)': 'tag-threat',
 
   // Network / Infrastructure → green
   'pfSense': 'tag-network', 'Network Segmentation': 'tag-network',
