@@ -275,7 +275,8 @@ const TAG_CLASS_MAP = {
   'YARA': 'tag-forensic', 'Any.run': 'tag-forensic',
   'VirusTotal': 'tag-forensic', 'Sandbox': 'tag-forensic',
   'Email Header Analysis': 'tag-forensic',
-  'Nessus': 'tag-forensic', 'Patch Management': 'tag-forensic',
+  'Nessus': 'tag-forensic', 'Nessus Essentials': 'tag-forensic',
+  'Patch Management': 'tag-forensic',
 
   // Cloud / Azure → cyan (SIEM family)
   'Microsoft Azure': 'tag-siem', 'Microsoft Sentinel': 'tag-siem',
@@ -293,10 +294,14 @@ const TAG_CLASS_MAP = {
 
   // Network / Infrastructure → green
   'pfSense': 'tag-network', 'Network Segmentation': 'tag-network',
-  'VMware': 'tag-network',
+  'VMware': 'tag-network', 'Docker Desktop': 'tag-network',
 
   // Monitoring / Endpoint → cyan (SIEM family)
   'Sysmon': 'tag-siem', 'PowerShell': 'tag-siem', 'Linux CLI': 'tag-siem',
+  'Splunk Enterprise': 'tag-siem',
+
+  // Incident response / frameworks → red
+  'PICERL Framework': 'tag-threat', 'WSL2 / Ubuntu': 'tag-default',
 
   // Identity & Access / Windows infra → default (handled below)
 };

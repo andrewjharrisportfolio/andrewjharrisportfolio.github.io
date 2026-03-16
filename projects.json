@@ -1,5 +1,13 @@
 [
   {
+    "name": "Vulnerability Assessment vs. Patch Management — Nessus Lab 2.0",
+    "description": "Deployed an intentionally vulnerable nginx container running on an end-of-life operating system alongside a Windows host running outdated software, then performed a full vulnerability assessment using Nessus Essentials against both targets. Demonstrates the critical difference between vulnerability assessment and patch management — two activities that are constantly used interchangeably but represent fundamentally different workflows.",
+    "tools": ["Nessus Essentials", "Docker Desktop", "Splunk Enterprise", "PowerShell", "WSL2 / Ubuntu", "PICERL Framework"],
+    "github": "https://github.com/andrewjharrisportfolio/-Vulnerability-Assessment-vs-Patch-Management-Nessus-Lab-2.0",
+    "category": "VULNERABILITY MANAGEMENT",
+    "featured": true
+  },
+  {
     "name": "Azure Honeypot — Real-World Threat Detection & Hardening (Microsoft Sentinel)",
     "description": "Deployed an intentionally misconfigured Windows Server VM in Azure to capture live attack traffic. Recorded 231,396 brute force attempts and 231,395 NTLM credential validation attempts from 8+ countries within 12 hours. Built KQL detection queries in Microsoft Sentinel mapped to MITRE ATT&CK framework. Deployed a honeytoken to detect post-exploitation behavior. Hardened the environment using NIST CSF 1.1 controls reducing failed logons to zero. Implemented SOAR automation via Azure Logic Apps triggering email alerts on brute force incidents.",
     "tools": ["Microsoft Azure", "Microsoft Sentinel", "KQL", "Azure Logic Apps", "NIST Cybersecurity Framework (CSF)", "GeoIP Watchlist", "Shodan", "Windows Remote Desktop Client", "Microsoft Log Analytics workspace", "WinRAR"],
