@@ -133,6 +133,15 @@ const SITE_DATA = {
     //   url:      "https://github.com/..."
     // }
     {
+      title:    "Interview Preparation or Detection?: Applying D3FEND Concepts in Practice",
+      summary:  "What started as SOC interview prep turned into a full lab build. Wazuh, DVWA, Kali Linux and a defensive framework that changed how I think about security.",
+      date:     "Mar 2026",
+      category: "Detection Engineering",
+      featured: true,
+      tools:    ["D3FEND Matrix", "Wazuh", "Docker", "DVWA", "Hydra", "Kali Linux"],
+      url:      "https://www.linkedin.com/pulse/interview-preparation-detection-applying-d3fend-concepts-harris-trehc"
+    },
+    {
       title:    "From Rejection to Resilience: My Journey Through the SANS Cyber Diversity Academy",
       summary:  "A candid account of navigating rejection and finding a path forward through the SANS Cyber Diversity Academy — covering the application process, what the program offers, and the lessons learned about persistence, community, and growth in the cybersecurity field.",
       date:     "Feb 2026",

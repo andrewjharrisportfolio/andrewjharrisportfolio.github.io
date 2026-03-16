@@ -294,14 +294,18 @@ const TAG_CLASS_MAP = {
 
   // Network / Infrastructure → green
   'pfSense': 'tag-network', 'Network Segmentation': 'tag-network',
-  'VMware': 'tag-network', 'Docker Desktop': 'tag-network',
+  'VMware': 'tag-network', 'Docker Desktop': 'tag-network', 'Docker': 'tag-network',
 
   // Monitoring / Endpoint → cyan (SIEM family)
   'Sysmon': 'tag-siem', 'PowerShell': 'tag-siem', 'Linux CLI': 'tag-siem',
   'Splunk Enterprise': 'tag-siem',
 
-  // Incident response / frameworks → red
-  'PICERL Framework': 'tag-threat', 'WSL2 / Ubuntu': 'tag-default',
+  // Incident response / frameworks / offensive tools → red
+  'PICERL Framework': 'tag-threat', 'D3FEND Matrix': 'tag-threat',
+  'DVWA': 'tag-threat', 'Hydra': 'tag-threat',
+  'WSL2 / Ubuntu': 'tag-default',
+  // SIEM / XDR
+  'Wazuh': 'tag-siem',
 
   // Identity & Access / Windows infra → default (handled below)
 };
