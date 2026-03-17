@@ -134,6 +134,7 @@ const SITE_DATA = {
     // }
     {
       title:    "Interview Preparation or Detection?: Applying D3FEND Concepts in Practice",
+      slug:     "interview-preparation-or-detection-applying-d3fend-concepts-in-practice",
       summary:  "What started as SOC interview prep turned into a full lab build. Wazuh, DVWA, Kali Linux and a defensive framework that changed how I think about security.",
       date:     "Mar 2026",
       category: "Detection Engineering",
@@ -143,6 +144,7 @@ const SITE_DATA = {
     },
     {
       title:    "From Rejection to Resilience: My Journey Through the SANS Cyber Diversity Academy",
+      slug:     "from-rejection-to-resilience-my-journey-through-the-sans-cyber-diversity-academy",
       summary:  "A candid account of navigating rejection and finding a path forward through the SANS Cyber Diversity Academy — covering the application process, what the program offers, and the lessons learned about persistence, community, and growth in the cybersecurity field.",
       date:     "Feb 2026",
       category: "Career",
@@ -152,6 +154,7 @@ const SITE_DATA = {
     },
     {
       title:    "14 Days of PowerShell: From Exposure to Execution",
+      slug:     "14-days-of-powershell-from-exposure-to-execution",
       summary:  "A 14-day structured deep-dive into PowerShell for security practitioners — covering core syntax, scripting fundamentals, and security-relevant techniques including enumeration, automation, and execution methods commonly encountered in both attacker TTPs and defensive SOC workflows.",
       date:     "Feb 2026",
       category: "Detection Engineering",
@@ -161,6 +164,7 @@ const SITE_DATA = {
     },
     {
       title:    "From Click to Compromise — DFIR Foundations and Techniques Write-Up",
+      slug:     "from-click-to-compromise-dfir-foundations-and-techniques-write-up",
       summary:  "Full intrusion chain analysis tracing an attacker from initial phishing email through credential harvesting, C2 beaconing, persistence, and data exfiltration. Applied core DFIR methodology using packet analysis, memory forensics, and log investigation, with the complete attack chain mapped to the MITRE ATT&CK framework.",
       date:     "Feb 2026",
       category: "DFIR",

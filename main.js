@@ -557,7 +557,7 @@ function buildWriteupCard(entry) {
 
   const card = document.createElement('a');
   card.className = 'writeup-card';
-  card.href      = entry.url;
+  card.href      = `/writeups/${entry.slug}/`;
   card.target    = '_blank';
   card.rel       = 'noopener';
   card.setAttribute('role', 'listitem');
