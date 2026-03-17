@@ -335,7 +335,7 @@ function buildProjectCard(project) {
       <h3 class="card-name">${project.name}</h3>
       <p class="card-desc">${project.description}</p>
       <div class="card-tags">${tagsHTML}</div>
-      <a class="card-link" href="${project.github}" target="_blank" rel="noopener">
+      <a class="card-link" href="/projects/${project.slug}/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
         </svg>
@@ -344,10 +344,10 @@ function buildProjectCard(project) {
     </div>
   `;
 
-  // Clicking the card body navigates to GitHub (not the explicit link)
+  // Clicking the card body navigates to the project redirect page (not the explicit link)
   card.addEventListener('click', (e) => {
     if (e.target.closest('.card-link')) return; // Let link handle itself
-    window.open(project.github, '_blank', 'noopener');
+    window.open(`/projects/${project.slug}/`, '_blank', 'noopener');
   });
 
   return card;

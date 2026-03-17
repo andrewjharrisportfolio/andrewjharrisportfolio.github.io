@@ -1,6 +1,7 @@
 [
   {
     "name": "Vulnerability Assessment vs. Patch Management — Nessus Lab 2.0",
+    "slug": "vulnerability-assessment-vs-patch-management-nessus-lab-2-0",
     "description": "Deployed an intentionally vulnerable nginx container running on an end-of-life operating system alongside a Windows host running outdated software, then performed a full vulnerability assessment using Nessus Essentials against both targets. Demonstrates the critical difference between vulnerability assessment and patch management — two activities that are constantly used interchangeably but represent fundamentally different workflows.",
     "tools": ["Nessus Essentials", "Docker Desktop", "Splunk Enterprise", "PowerShell", "WSL2 / Ubuntu", "PICERL Framework"],
     "github": "https://github.com/andrewjharrisportfolio/-Vulnerability-Assessment-vs-Patch-Management-Nessus-Lab-2.0",
@@ -9,6 +10,7 @@
   },
   {
     "name": "Azure Honeypot — Real-World Threat Detection & Hardening (Microsoft Sentinel)",
+    "slug": "azure-honeypot-real-world-threat-detection-hardening-microsoft-sentinel",
     "description": "Deployed an intentionally misconfigured Windows Server VM in Azure to capture live attack traffic. Recorded 231,396 brute force attempts and 231,395 NTLM credential validation attempts from 8+ countries within 12 hours. Built KQL detection queries in Microsoft Sentinel mapped to MITRE ATT&CK framework. Deployed a honeytoken to detect post-exploitation behavior. Hardened the environment using NIST CSF 1.1 controls reducing failed logons to zero. Implemented SOAR automation via Azure Logic Apps triggering email alerts on brute force incidents.",
     "tools": ["Microsoft Azure", "Microsoft Sentinel", "KQL", "Azure Logic Apps", "NIST Cybersecurity Framework (CSF)", "GeoIP Watchlist", "Shodan", "Windows Remote Desktop Client", "Microsoft Log Analytics workspace", "WinRAR"],
     "github": "https://github.com/andrewjharrisportfolio/Azure-Honeypot-Real-World-Threat-Detection-with-Microsoft-Sentinel/blob/main/README.md",
@@ -17,6 +19,7 @@
   },
   {
     "name": "PsExec Lateral Movement Hunt — CyberDefenders Lab",
+    "slug": "psexec-lateral-movement-hunt-cyberdefenders-lab",
     "description": "Investigated SMB traffic in a PCAP file to track attacker pivot paths across networked workstations. Identified compromised hosts (HR_PC, SALES-PC, MARKETING-PC), confirmed psexesvc.exe deployment via ADMIN$ and IPC$ shares, and mapped every stage of the attack to MITRE ATT&CK techniques T1021.002, T1570, and T1569.002.",
     "tools": ["Wireshark", "MITRE ATT&CK"],
     "github": "https://github.com/andrewjharrisportfolio/PsExec-Hunt-Lab-Cyberdefenders-",
@@ -25,6 +28,7 @@
   },
   {
     "name": "Active Directory Security Assessment with Splunk Integration",
+    "slug": "active-directory-security-assessment-with-splunk-integration",
     "description": "Built a controlled multi-machine lab (Windows Server DC, Ubuntu Splunk SIEM, Windows 10 target, Kali attacker) to evaluate Active Directory resilience against brute-force attacks. Simulated credential attacks with Crowbar, monitored Event ID 4625 alerts in Splunk, and executed Atomic Red Team test cases mapped to MITRE ATT&CK to validate real-time detection coverage.",
     "tools": ["Splunk", "Sysmon", "Atomic Red Team", "MITRE ATT&CK", "Kali Linux", "Crowbar"],
     "github": "https://github.com/andrewjharrisportfolio/-Active-Directory-Security-Assessment-with-Splunk-Integration",
@@ -33,6 +37,7 @@
   },
   {
     "name": "Vulnerability Remediation with Nessus",
+    "slug": "vulnerability-remediation-with-nessus",
     "description": "Deployed Nessus in a Windows VM lab to perform authenticated vulnerability scans, triage findings by severity, and execute a full remediation cycle. Applied patches via Windows Update, enforced Network Message Signing through Group Policy, and re-scanned to confirm vulnerability closure — demonstrating a complete vulnerability management workflow.",
     "tools": ["Nessus", "Windows Server", "Group Policy", "Patch Management"],
     "github": "https://github.com/andrewjharrisportfolio/Vulnerability-Remediation-With-Nessus",
@@ -41,6 +46,7 @@
   },
   {
     "name": "Threaded Port Scanner in Python",
+    "slug": "threaded-port-scanner-in-python",
     "description": "Built a multithreaded TCP port scanner from scratch using Python socket programming and a queue-based thread pool. Scans multiple ports simultaneously for dramatically improved speed over sequential scanning. Handles IP parsing, configurable port ranges, timeout management, and exception handling with clean terminal output.",
     "tools": ["Python", "Multithreading", "Socket Programming"],
     "github": "https://github.com/andrewjharrisportfolio/Threaded-Port-Scanner-in-Python",
@@ -49,6 +55,7 @@
   },
   {
     "name": "MFA Deployment for Active Directory via Duo Security",
+    "slug": "mfa-deployment-for-active-directory-via-duo-security",
     "description": "Implemented Two-Factor Authentication across an Active Directory environment using Duo Security. Configured Duo groups, enrolled users, set up NTP for time synchronization, applied RDP application protection, and validated push-notification authentication end-to-end — demonstrating IAM hardening in a Windows domain.",
     "tools": ["Active Directory", "Duo Security", "Windows Server", "Group Policy"],
     "github": "https://github.com/andrewjharrisportfolio/MFA-Implementation-For-Active-Directory",
@@ -57,6 +64,7 @@
   },
   {
     "name": "pfSense Firewall VM Lab",
+    "slug": "pfsense-firewall-vm-lab",
     "description": "Deployed pfSense as a virtualized network security appliance in VMware Workstation to establish network segmentation and traffic control. Configured DHCP, assigned interfaces, validated firewall rule enforcement using Kali Linux as the test client, and accessed the pfSense web console to simulate enterprise perimeter firewall management.",
     "tools": ["pfSense", "VMware", "Kali Linux", "Network Segmentation"],
     "github": "https://github.com/andrewjharrisportfolio/pfSense-Firewall-VM-Lab",
