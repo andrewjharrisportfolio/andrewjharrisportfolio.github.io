@@ -175,6 +175,40 @@ const SITE_DATA = {
   ],
 
   // ─────────────────────────────────────────────
+  // INTERNSHIP — internship.html
+  // ─────────────────────────────────────────────
+  internship: [
+    {
+      name:        "Internship Overview",
+      slug:        "internship-overview",
+      description: "Overview of the Log(N) Pacific internship — goals, scope, and the security work undertaken across threat hunting, vulnerability management, and system hardening.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship",
+      category:    "Overview"
+    },
+    {
+      name:        "Threat Hunt Reports",
+      slug:        "threat-hunt-reports",
+      description: "Structured threat hunting reports produced during the internship, documenting hypotheses, detection logic, findings, and recommendations aligned to the MITRE ATT&CK framework.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/Threat%20Hunt%20Reports",
+      category:    "Threat Hunting"
+    },
+    {
+      name:        "STIGS",
+      slug:        "stigs",
+      description: "Security Technical Implementation Guide (STIG) checklists and hardening documentation applied to systems during the internship to meet compliance and security baseline requirements.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/STIGS",
+      category:    "Compliance"
+    },
+    {
+      name:        "Vulnerability Management",
+      slug:        "vulnerability-management",
+      description: "Vulnerability scan results, risk prioritization, and remediation tracking documentation produced during the internship using industry-standard vulnerability management workflows.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/Vulnerability%20Management",
+      category:    "Vulnerability Management"
+    }
+  ],
+
+  // ─────────────────────────────────────────────
   // CONTACT — contact.html
   // ─────────────────────────────────────────────
   contact: {

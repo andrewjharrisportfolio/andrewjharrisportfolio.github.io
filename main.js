@@ -602,7 +602,52 @@ function initWriteupsPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   10. CONTACT PAGE
+   10. INTERNSHIP PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+const INTERNSHIP_CATEGORY_COLOR = {
+  'Overview':              { hex: '#00e5ff', cls: 'tag-siem'    },
+  'Threat Hunting':        { hex: '#00ff88', cls: 'tag-threat'  },
+  'Compliance':            { hex: '#b24dff', cls: 'tag-forensic'},
+  'Vulnerability Management': { hex: '#ff9d00', cls: 'tag-network'}
+};
+
+function buildInternshipCard(entry) {
+  const color = INTERNSHIP_CATEGORY_COLOR[entry.category] || { hex: '#00e5ff', cls: 'tag-siem' };
+
+  const card = document.createElement('a');
+  card.className = 'project-card';
+  card.href      = `/internship/${entry.slug}/`;
+  card.target    = '_blank';
+  card.rel       = 'noopener';
+  card.setAttribute('role', 'listitem');
+
+  card.innerHTML = `
+    <div class="card-header">
+      <h3 class="card-title">${entry.name}</h3>
+      <span class="card-category" style="color:${color.hex}">${entry.category}</span>
+    </div>
+    <p class="card-desc">${entry.description}</p>
+    <span class="card-link" style="color:${color.hex}">View on GitHub &rarr;</span>
+  `;
+
+  return card;
+}
+
+function initInternshipPage() {
+  const grid = document.getElementById('internship-grid');
+  if (!grid || typeof SITE_DATA === 'undefined') return;
+
+  if (!SITE_DATA.internship || SITE_DATA.internship.length === 0) {
+    grid.innerHTML = `<p class="writeup-empty">// No internship entries yet — check back soon.</p>`;
+    return;
+  }
+
+  SITE_DATA.internship.forEach(entry => grid.appendChild(buildInternshipCard(entry)));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   12. CONTACT PAGE
    ═══════════════════════════════════════════════════════════ */
 
 function initContactPage() {
@@ -647,7 +692,7 @@ function initContactPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   11. PAGE ROUTER
+   13. PAGE ROUTER
    Called by DOMContentLoaded in the nav init block above.
    Each HTML page sets window.PAGE_ID before loading main.js
    ═══════════════════════════════════════════════════════════ */
@@ -659,6 +704,7 @@ function pageInit() {
     case 'writeups':       initWriteupsPage();       break;
     case 'certifications': initCertificationsPage(); break;
     case 'training':       initTrainingPage();       break;
+    case 'internship':     initInternshipPage();     break;
     case 'contact':        initContactPage();        break;
   }
 }
