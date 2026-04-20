@@ -3,14 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Andrew Harris — Security Operations Analyst</title>
-  <meta name="description" content="Cybersecurity portfolio of Andrew Harris — SOC Analyst & Detection Engineer specializing in SIEM, threat detection, and incident response." />
+  <!-- HTML Meta Tags -->
+  <title>Andrew Harris — Cybersecurity Portfolio</title>
+  <meta name="description" content="Cybersecurity portfolio of Andrew Harris — SOC Analyst & Detection Engineer specializing in SIEM, threat detection, and incident response.">
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="https://andrewjharrisportfolio.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Andrew Harris — Cybersecurity Portfolio">
+  <meta property="og:description" content="Cybersecurity portfolio of Andrew Harris — SOC Analyst & Detection Engineer specializing in SIEM, threat detection, and incident response.">
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary">
+  <meta property="twitter:domain" content="andrewjharrisportfolio.github.io">
+  <meta property="twitter:url" content="https://andrewjharrisportfolio.github.io/">
+  <meta name="twitter:title" content="Andrew Harris — Cybersecurity Portfolio">
+  <meta name="twitter:description" content="Cybersecurity portfolio of Andrew Harris — SOC Analyst & Detection Engineer specializing in SIEM, threat detection, and incident response.">
   <link rel="stylesheet" href="styles.css" />
   <!-- PAGE_ID tells main.js which page initializer to run -->
   <script>window.PAGE_ID = 'home';</script>
   <script src="site-data.js"></script>
 </head>
 <body>
+
+  <!-- Loading screen — runs once per session; must be first so it blocks render -->
+  <script src="loader.js"></script>
 
   <!-- Scan-line beam overlay -->
   <div class="scanline" aria-hidden="true"></div>
@@ -19,13 +34,15 @@
 
     <!-- ══ NAVIGATION ══════════════════════════════════════ -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
-      <a href="index.html" class="nav-logo">[ DREW.SEC ]</a>
+      <a href="index.html" class="nav-logo">[ HarrisDigitalDefense.SEC ]</a>
       <button class="nav-hamburger" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
       <ul class="nav-links" role="list">
         <li><a href="index.html">Home</a></li>
         <li><a href="projects.html">Projects</a></li>
+        <li><a href="writeups.html">Write-Ups</a></li>
         <li><a href="certifications.html">Certifications</a></li>
         <li><a href="training.html">Training &amp; Labs</a></li>
+        <li><a href="internship.html">Log(N) Pacific Internship</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -123,12 +140,70 @@
         </div>
       </section>
 
+      <div class="divider"></div>
+
+      <!-- ══ FEATURED TRAINING ════════════════════════════════ -->
+      <section class="section" aria-labelledby="featured-training-heading">
+        <div class="section-header">
+          <span class="section-num" aria-hidden="true">04</span>
+          <h2 class="section-title" id="featured-training-heading">Featured <span>Training</span></h2>
+        </div>
+
+        <div class="training-grid" id="featured-training" role="list" aria-label="Featured training">
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="training.html" style="
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--cyan);
+            border: 1px solid rgba(0,229,255,0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: box-shadow 0.2s, background 0.2s;
+          "
+          onmouseover="this.style.boxShadow='0 0 20px rgba(0,229,255,0.35)';this.style.background='rgba(0,229,255,0.06)'"
+          onmouseout="this.style.boxShadow='';this.style.background=''"
+          >// View All Training &rarr;</a>
+        </div>
+      </section>
+
+      <div class="divider"></div>
+
+      <!-- ══ FEATURED WRITE-UPS ════════════════════════════════ -->
+      <section class="section" aria-labelledby="featured-writeups-heading">
+        <div class="section-header">
+          <span class="section-num" aria-hidden="true">05</span>
+          <h2 class="section-title" id="featured-writeups-heading">Featured <span>Write-Ups</span></h2>
+        </div>
+
+        <div class="writeup-grid" id="featured-writeups" role="list" aria-label="Featured write-ups">
+        </div>
+
+        <div style="margin-top:2rem;">
+          <a href="writeups.html" style="
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--cyan);
+            border: 1px solid rgba(0,229,255,0.3);
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            display: inline-block;
+            transition: box-shadow 0.2s, background 0.2s;
+          "
+          onmouseover="this.style.boxShadow='0 0 20px rgba(0,229,255,0.35)';this.style.background='rgba(0,229,255,0.06)'"
+          onmouseout="this.style.boxShadow='';this.style.background=''"
+          >// View All Write-Ups &rarr;</a>
+        </div>
+      </section>
+
     </main>
 
     <!-- ══ FOOTER ═══════════════════════════════════════════ -->
     <footer class="footer" role="contentinfo">
-      <span class="footer-logo">[ DREW.SEC ]</span>
-      <span class="footer-copy">&copy; 2025 Andrew Harris &mdash; Security Operations Analyst</span>
+      <span class="footer-logo">[ HarrisDigitalDefense.SEC ]</span>
+      <span class="footer-copy">&copy; 2026 Andrew Harris &mdash; Cyber Security Portfolio</span>
     </footer>
 
   </div><!-- /.page-wrapper -->

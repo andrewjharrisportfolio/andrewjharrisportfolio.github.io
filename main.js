@@ -241,6 +241,21 @@ document.addEventListener('DOMContentLoaded', () => {
    Maps tool names to CSS tag color classes
    ═══════════════════════════════════════════════════════════ */
 
+/* ═══════════════════════════════════════════════════════════
+   WRITE-UP CATEGORY COLOR MAP
+   Maps category names to hex and rgba values for card theming
+   ═══════════════════════════════════════════════════════════ */
+
+const CATEGORY_COLOR_MAP = {
+  'DFIR':                  { hex: '#b24dff', rgba: 'rgba(178,77,255,' },
+  'Malware Analysis':      { hex: '#ff3d5a', rgba: 'rgba(255,61,90,'  },
+  'Threat Hunting':        { hex: '#00e5ff', rgba: 'rgba(0,229,255,'  },
+  'Incident Response':     { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+  'Detection Engineering': { hex: '#00e5ff', rgba: 'rgba(0,229,255,'  },
+  'SOC Analysis':          { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+  'Career':                { hex: '#00ff88', rgba: 'rgba(0,255,136,'  },
+};
+
 const TAG_CLASS_MAP = {
   // SIEM / Log tools → cyan
   'Splunk': 'tag-siem', 'SPL': 'tag-siem', 'Azure Sentinel': 'tag-siem',
@@ -253,12 +268,20 @@ const TAG_CLASS_MAP = {
   'Netcat': 'tag-network', 'Zeek/Bro': 'tag-network',
 
   // Forensics / Malware / Vuln scanning → purple
-  'Volatility': 'tag-forensic', 'FTK Imager': 'tag-forensic',
+  'Volatility': 'tag-forensic', 'Volatility3': 'tag-forensic',
+  'Strings': 'tag-forensic',
+  'FTK Imager': 'tag-forensic',
   'Autopsy': 'tag-forensic', 'Sysinternals': 'tag-forensic',
   'YARA': 'tag-forensic', 'Any.run': 'tag-forensic',
   'VirusTotal': 'tag-forensic', 'Sandbox': 'tag-forensic',
   'Email Header Analysis': 'tag-forensic',
-  'Nessus': 'tag-forensic', 'Patch Management': 'tag-forensic',
+  'Nessus': 'tag-forensic', 'Nessus Essentials': 'tag-forensic',
+  'Patch Management': 'tag-forensic',
+
+  // Cloud / Azure → cyan (SIEM family)
+  'Microsoft Azure': 'tag-siem', 'Microsoft Sentinel': 'tag-siem',
+  'Azure Logic Apps': 'tag-siem', 'Microsoft Log Analytics workspace': 'tag-siem',
+  'Windows Remote Desktop Client': 'tag-default',
 
   // Threat intel / Attack frameworks / Offensive tools → red
   'MITRE ATT&CK': 'tag-threat', 'Metasploit': 'tag-threat',
@@ -266,13 +289,23 @@ const TAG_CLASS_MAP = {
   'TheHive': 'tag-threat', 'EDR': 'tag-threat',
   'Atomic Red Team': 'tag-threat', 'Kali Linux': 'tag-threat',
   'Crowbar': 'tag-threat',
+  'Shodan': 'tag-threat', 'GeoIP Watchlist': 'tag-threat',
+  'NIST Cybersecurity Framework (CSF)': 'tag-threat',
 
   // Network / Infrastructure → green
   'pfSense': 'tag-network', 'Network Segmentation': 'tag-network',
-  'VMware': 'tag-network',
+  'VMware': 'tag-network', 'Docker Desktop': 'tag-network', 'Docker': 'tag-network',
 
   // Monitoring / Endpoint → cyan (SIEM family)
-  'Sysmon': 'tag-siem',
+  'Sysmon': 'tag-siem', 'PowerShell': 'tag-siem', 'Linux CLI': 'tag-siem',
+  'Splunk Enterprise': 'tag-siem',
+
+  // Incident response / frameworks / offensive tools → red
+  'PICERL Framework': 'tag-threat', 'D3FEND Matrix': 'tag-threat',
+  'DVWA': 'tag-threat', 'Hydra': 'tag-threat',
+  'WSL2 / Ubuntu': 'tag-default',
+  // SIEM / XDR
+  'Wazuh': 'tag-siem',
 
   // Identity & Access / Windows infra → default (handled below)
 };
@@ -286,8 +319,11 @@ function getTagClass(tool) {
    ═══════════════════════════════════════════════════════════ */
 
 function buildProjectCard(project) {
-  const card = document.createElement('article');
+  const card = document.createElement('a');
   card.className = 'project-card';
+  card.href      = `/projects/${project.slug}/`;
+  card.target    = '_blank';
+  card.rel       = 'noopener';
   card.setAttribute('data-tools', project.tools.join(',').toLowerCase());
 
   const tagsHTML = project.tools
@@ -302,20 +338,14 @@ function buildProjectCard(project) {
       <h3 class="card-name">${project.name}</h3>
       <p class="card-desc">${project.description}</p>
       <div class="card-tags">${tagsHTML}</div>
-      <a class="card-link" href="${project.github}" target="_blank" rel="noopener">
+      <span class="card-link">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/>
         </svg>
         View on GitHub &rarr;
-      </a>
+      </span>
     </div>
   `;
-
-  // Clicking the card body navigates to GitHub (not the explicit link)
-  card.addEventListener('click', (e) => {
-    if (e.target.closest('.card-link')) return; // Let link handle itself
-    window.open(project.github, '_blank', 'noopener');
-  });
 
   return card;
 }
@@ -361,6 +391,32 @@ function initHomePage() {
 
     const heroTagline = document.getElementById('hero-tagline');
     if (heroTagline) heroTagline.textContent = SITE_DATA.hero.tagline;
+
+    // Inject featured write-ups
+    const writeupsContainer = document.getElementById('featured-writeups');
+    if (writeupsContainer) {
+      const featured = (SITE_DATA.writeups || []).filter(w => w.featured);
+      featured.forEach(entry => writeupsContainer.appendChild(buildWriteupCard(entry)));
+    }
+
+    // Inject featured training
+    const trainingContainer = document.getElementById('featured-training');
+    if (trainingContainer) {
+      const featured = SITE_DATA.training.filter(t => t.featured);
+      featured.forEach(entry => {
+        const card = document.createElement('div');
+        card.className = 'training-card';
+        const tagsHTML = entry.tools
+          .map(t => `<span class="tag ${getTagClass(t)}">${t}</span>`)
+          .join('');
+        card.innerHTML = `
+          <h3 class="training-name">${entry.name}</h3>
+          <div class="card-tags">${tagsHTML}</div>
+          <p class="training-desc">${entry.description}</p>
+        `;
+        trainingContainer.appendChild(card);
+      });
+    }
   }
 }
 
@@ -438,12 +494,29 @@ function initCertificationsPage() {
     a.href      = cert.credlyUrl;
     a.target    = '_blank';
     a.rel       = 'noopener';
+
+    // Use real badge image if imageUrl is set, otherwise fall back to abbr text
+    const badgeInner = cert.imageUrl
+      ? `<img class="cert-badge-img" src="${cert.imageUrl}" alt="${cert.name} badge" loading="lazy" />`
+      : `<span class="cert-abbr">${cert.abbr}</span>`;
+
+    // Always show abbr label; for image badges it appears below the circle
+    const abbrLabel = cert.imageUrl
+      ? `<span class="cert-abbr">${cert.abbr}</span>`
+      : '';
+
+    // Coursera certs link to a verify page, not Credly
+    const verifyLabel = cert.credlyUrl.includes('coursera.org')
+      ? 'Verify on Coursera ↗'
+      : cert.credlyUrl.includes('learn.microsoft.com')
+        ? 'Verify on Microsoft Learn ↗'
+        : 'Verify on Credly ↗';
+
     a.innerHTML = `
-      <div class="cert-badge-circle">
-        <span class="cert-abbr">${cert.abbr}</span>
-      </div>
+      <div class="cert-badge-circle">${badgeInner}</div>
+      ${abbrLabel}
       <span class="cert-name">${cert.name}</span>
-      <span class="cert-verify-label">Verify on Credly ↗</span>
+      <span class="cert-verify-label">${verifyLabel}</span>
     `;
     grid.appendChild(a);
   });
@@ -473,7 +546,108 @@ function initTrainingPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   9. CONTACT PAGE
+   9. WRITE-UPS PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+function buildWriteupCard(entry) {
+  const cat = CATEGORY_COLOR_MAP[entry.category] || { hex: '#00e5ff', rgba: 'rgba(0,229,255,' };
+
+  const card = document.createElement('a');
+  card.className = 'writeup-card';
+  card.href      = `/writeups/${entry.slug}/`;
+  card.target    = '_blank';
+  card.rel       = 'noopener';
+  card.setAttribute('role', 'listitem');
+  card.style.borderTopColor = cat.hex;
+
+  const tagsHTML = entry.tools
+    .map(t => `<span class="tag ${getTagClass(t)}">${t}</span>`)
+    .join('');
+
+  card.innerHTML = `
+    <div class="writeup-card-header">
+      <span class="writeup-category" style="color:${cat.hex};border-color:${cat.rgba}0.3);background:${cat.rgba}0.06)">${entry.category}</span>
+      <span class="writeup-date">${entry.date}</span>
+    </div>
+    <h3 class="writeup-title">${entry.title}</h3>
+    <p class="writeup-summary">${entry.summary}</p>
+    <div class="card-tags">${tagsHTML}</div>
+    <span class="writeup-read-more" style="color:${cat.hex}">Read Write-Up &rarr;</span>
+  `;
+
+  card.addEventListener('mouseenter', () => {
+    card.style.boxShadow  = `0 8px 30px ${cat.rgba}0.18), 0 0 0 1px ${cat.rgba}0.25)`;
+    card.style.borderColor = `${cat.rgba}0.3)`;
+    card.style.borderTopColor = cat.hex;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.boxShadow   = '';
+    card.style.borderColor = '';
+    card.style.borderTopColor = cat.hex;
+  });
+
+  return card;
+}
+
+function initWriteupsPage() {
+  const grid = document.getElementById('writeup-grid');
+  if (!grid || typeof SITE_DATA === 'undefined') return;
+
+  if (!SITE_DATA.writeups || SITE_DATA.writeups.length === 0) {
+    grid.innerHTML = `<p class="writeup-empty">// No write-ups published yet — check back soon.</p>`;
+    return;
+  }
+
+  SITE_DATA.writeups.forEach(entry => grid.appendChild(buildWriteupCard(entry)));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   10. INTERNSHIP PAGE
+   ═══════════════════════════════════════════════════════════ */
+
+const INTERNSHIP_CATEGORY_COLOR = {
+  'Overview':              { hex: '#00e5ff', cls: 'tag-siem'    },
+  'Threat Hunting':        { hex: '#00ff88', cls: 'tag-threat'  },
+  'Compliance':            { hex: '#b24dff', cls: 'tag-forensic'},
+  'Vulnerability Management': { hex: '#ff9d00', cls: 'tag-network'}
+};
+
+function buildInternshipCard(entry) {
+  const color = INTERNSHIP_CATEGORY_COLOR[entry.category] || { hex: '#00e5ff', cls: 'tag-siem' };
+
+  const card = document.createElement('a');
+  card.className = 'project-card';
+  card.href      = `/internship/${entry.slug}/`;
+  card.target    = '_blank';
+  card.rel       = 'noopener';
+  card.setAttribute('role', 'listitem');
+
+  card.innerHTML = `
+    <div class="card-header">
+      <h3 class="card-title">${entry.name}</h3>
+      <span class="card-category" style="color:${color.hex}">${entry.category}</span>
+    </div>
+    <p class="card-desc">${entry.description}</p>
+    <span class="card-link" style="color:${color.hex}">View on GitHub &rarr;</span>
+  `;
+
+  return card;
+}
+
+function initInternshipPage() {
+  const grid = document.getElementById('internship-grid');
+  if (!grid || typeof SITE_DATA === 'undefined') return;
+
+  if (!SITE_DATA.internship || SITE_DATA.internship.length === 0) {
+    grid.innerHTML = `<p class="writeup-empty">// No internship entries yet — check back soon.</p>`;
+    return;
+  }
+
+  SITE_DATA.internship.forEach(entry => grid.appendChild(buildInternshipCard(entry)));
+}
+
+/* ═══════════════════════════════════════════════════════════
+   12. CONTACT PAGE
    ═══════════════════════════════════════════════════════════ */
 
 function initContactPage() {
@@ -518,17 +692,19 @@ function initContactPage() {
 }
 
 /* ═══════════════════════════════════════════════════════════
-   10. PAGE ROUTER
+   13. PAGE ROUTER
    Called by DOMContentLoaded in the nav init block above.
    Each HTML page sets window.PAGE_ID before loading main.js
    ═══════════════════════════════════════════════════════════ */
 
 function pageInit() {
   switch (window.PAGE_ID) {
-    case 'home':          initHomePage();          break;
-    case 'projects':      initProjectsPage();      break;
+    case 'home':           initHomePage();           break;
+    case 'projects':       initProjectsPage();       break;
+    case 'writeups':       initWriteupsPage();       break;
     case 'certifications': initCertificationsPage(); break;
-    case 'training':      initTrainingPage();      break;
-    case 'contact':       initContactPage();       break;
+    case 'training':       initTrainingPage();       break;
+    case 'internship':     initInternshipPage();     break;
+    case 'contact':        initContactPage();        break;
   }
 }

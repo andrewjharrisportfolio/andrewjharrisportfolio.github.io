@@ -12,7 +12,7 @@ const SITE_DATA = {
   // ─────────────────────────────────────────────
   hero: {
     name: "Andrew Harris",
-    title: "Security Operations Analyst & Detection Engineer",
+    title: "Security Operations Analyst & IT Professional",
     // Displayed inside the terminal-style tagline block
     tagline: "Detecting threats. Engineering detections. Closing the gap between noise and signal."
   },
@@ -20,14 +20,14 @@ const SITE_DATA = {
   // ─────────────────────────────────────────────
   // ABOUT — index.html "cat about.txt" section
   // ─────────────────────────────────────────────
-  about: `I'm a Security Operations Analyst and Detection Engineer with hands-on experience triaging 150+ security incidents per month across enterprise SIEM environments. I specialize in building high-fidelity detection rules, reducing false-positive noise, and translating threat intelligence into actionable alerts. My work bridges the gap between raw log data and meaningful, response-ready detections — helping security teams move faster and smarter. With 6 certifications earned in under 13 months and a 98.5% QA rating, I bring both the technical depth and the discipline that modern SOC environments demand.`,
+  about: `I'm a cybersecurity professional transitioning from IT support into Security Operations, with 2.5 years of enterprise experience and six certifications earned in 13 months—including GIAC GCIH and GSEC. I specialize in threat detection and incident investigation, analyzing security alerts using SIEM correlation, network traffic analysis, and malware investigation techniques. My home lab work focuses on understanding attacker behavior through hands-on projects—using Wireshark for protocol analysis, Volatility for memory forensics, and KQL for threat hunting in Microsoft Sentinel. With a 98.5% QA rating in my current role and practical experience applying the MITRE ATT&CK framework, I bring both the technical foundation and the work ethic that modern SOC environments demand.`,
 
   // ─────────────────────────────────────────────
   // STATS — index.html stats bar
   // color options: 'cyan' | 'green' | 'purple'
   // ─────────────────────────────────────────────
   stats: [
-    { value: "150+",  label: "Monthly Security Incidents Handled", color: "cyan"   },
+    { value: "150+",  label: "Monthly Incidents Handled", color: "cyan"   },
     { value: "98.5%", label: "QA Rating",                          color: "green"  },
     { value: "6",     label: "Certifications Earned in 13 Months", color: "purple" }
   ],
@@ -40,32 +40,46 @@ const SITE_DATA = {
     {
       abbr:      "GCIH",
       name:      "GIAC Certified Incident Handler",
-      credlyUrl: "https://www.credly.com/badges/your-gcih-badge-id"
+      credlyUrl: "https://www.credly.com/badges/dc34fc75-1556-4f63-8e67-1248d0678880/public_url",
+      // ↓ Paste your Credly badge image URL here (right-click badge on Credly → Copy Image Address)
+      imageUrl:  ""
     },
     {
       abbr:      "GSEC",
       name:      "GIAC Security Essentials",
-      credlyUrl: "https://www.credly.com/badges/your-gsec-badge-id"
+      credlyUrl: "https://www.credly.com/badges/42812ab8-5637-4544-90b3-01ce70d81969/public_url",
+      imageUrl:  ""
     },
     {
       abbr:      "GFACT",
       name:      "GIAC Foundational Cybersecurity Technologies",
-      credlyUrl: "https://www.credly.com/badges/your-gfact-badge-id"
+      credlyUrl: "https://www.credly.com/badges/74fbf669-fe87-4733-ac17-076db3929e92/linked_in_profile",
+      imageUrl:  ""
     },
     {
       abbr:      "SEC+",
       name:      "CompTIA Security+",
-      credlyUrl: "https://www.credly.com/badges/your-secplus-badge-id"
+      credlyUrl: "https://www.credly.com/badges/cef8f254-88b9-4935-b002-bdc78cfeb43e/public_url",
+      imageUrl:  ""
     },
     {
       abbr:      "AZ-500",
       name:      "Microsoft Azure Security Engineer Associate",
-      credlyUrl: "https://www.credly.com/badges/your-az500-badge-id"
+      credlyUrl: "https://learn.microsoft.com/api/credentials/share/en-us/AndrewHarris-1272/19DF8BF95AD43DD7?sharingId=C16A570FF06800C4",
+      imageUrl:  ""
     },
     {
       abbr:      "A+",
       name:      "CompTIA A+",
-      credlyUrl: "https://www.credly.com/badges/your-aplus-badge-id"
+      credlyUrl: "https://www.credly.com/badges/a5b29d27-d5aa-4f7e-a623-13806196e91d/linked_in_profile",
+      imageUrl:  ""
+    },
+    {
+      abbr:      "COURSERA",
+      name:      "Coursera Specialization Certificate",
+      // ↓ Update the name above once you confirm the specialization title
+      credlyUrl: "https://www.coursera.org/account/accomplishments/specialization/BLQDDUYC79C8",
+      imageUrl:  ""
     }
   ],
 
@@ -75,28 +89,26 @@ const SITE_DATA = {
   training: [
     {
       name: "SANS SEC504 — Hacker Tools, Techniques & Incident Handling",
+      featured: true,
       tools: ["Wireshark", "Tcpdump", "Netcat", "Metasploit", "Nmap", "Volatility"],
       description: "Completed SANS SEC504 coursework covering attacker methodologies, live exploitation techniques, and structured incident response workflows. Applied packet capture analysis with Wireshark and tcpdump, performed memory forensics with Volatility, and practiced containment and eradication procedures across a range of attack scenarios."
     },
     {
       name: "SANS SEC401 — Security Essentials: Network, Endpoint & Cloud",
+      featured: true,
       tools: ["Splunk", "Zeek", "Suricata", "PowerShell", "Linux CLI", "Nmap"],
       description: "Covered foundational and advanced defensive security concepts including network traffic analysis, endpoint hardening, and cloud security principles. Used Zeek and Suricata for network-based detection, Splunk for log aggregation and alerting, and PowerShell for Windows endpoint investigation."
-    },
-    {
-      name: "TryHackMe — SOC Level 1 Path",
-      tools: ["Splunk", "Snort", "Wireshark", "OSINT Tools", "TheHive", "MITRE ATT&CK"],
-      description: "Completed the SOC Level 1 learning path covering phishing analysis, SIEM operations, network intrusion detection, and threat intelligence workflows. Practiced alert triage, IOC pivoting, and writing structured incident reports using TheHive."
-    },
-    {
-      name: "Blue Team Labs Online — Threat Detection & Forensics",
-      tools: ["Wireshark", "Autopsy", "FTK Imager", "Volatility", "Sysinternals"],
-      description: "Hands-on digital forensics and threat hunting labs covering disk imaging, memory analysis, malware artifact extraction, and timeline reconstruction. Practiced identifying attacker persistence mechanisms and lateral movement artifacts across Windows environments."
     },
     {
       name: "LetsDefend — Incident Response Platform",
       tools: ["SIEM", "EDR", "Threat Intelligence Feeds", "Email Header Analysis", "Sandbox"],
       description: "Simulated real-world SOC workflows including alert triage, malware sandbox analysis, phishing investigation, and incident escalation. Developed structured investigation habits aligned with NIST and PICERL incident response frameworks."
+    },
+    {
+      name: "Blue Cape Security — DFIR Foundations and Techniques",
+      featured: true,
+      tools: ["Wireshark", "Splunk", "Volatility3", "CyberChef", "Eric Zimmerman's Tools", "MITRE ATT&CK"],
+      description: "8-hour instructor-led bootcamp covering core Digital Forensics and Incident Response methodologies. Topics included incident response procedures, data collection techniques, applied forensic analysis, and essential DFIR tooling. Completed course assessment with 84%, identifying key strengths and areas for continued growth. Applied coursework hands-on through a self-built lab environment to analyze a real attack scenario — tracing a full intrusion chain from initial phishing through C2 beaconing, persistence, and data exfiltration, mapped to the MITRE ATT&CK framework."
     },
     {
       name: "Microsoft Azure — Security & Identity Labs (AZ-500 Prep)",
@@ -106,12 +118,103 @@ const SITE_DATA = {
   ],
 
   // ─────────────────────────────────────────────
+  // WRITE-UPS — writeups.html
+  // Each entry: title, summary, date (display string), category, tools (array), url
+  // Categories: 'DFIR' | 'Malware Analysis' | 'Threat Hunting' | 'Incident Response' | 'Detection Engineering' | 'SOC Analysis' | 'Career'
+  // ─────────────────────────────────────────────
+  writeups: [
+    // ↓ Add your write-up entries here. Example entry shown below — replace or remove as needed.
+    // {
+    //   title:    "Write-Up Title",
+    //   summary:  "Short description of what the write-up covers.",
+    //   date:     "Jan 1, 2025",
+    //   category: "DFIR",
+    //   tools:    ["Wireshark", "Splunk", "Volatility"],
+    //   url:      "https://github.com/..."
+    // }
+    {
+      title:    "Interview Preparation or Detection?: Applying D3FEND Concepts in Practice",
+      slug:     "interview-preparation-or-detection-applying-d3fend-concepts-in-practice",
+      summary:  "What started as SOC interview prep turned into a full lab build. Wazuh, DVWA, Kali Linux and a defensive framework that changed how I think about security.",
+      date:     "Mar 2026",
+      category: "Detection Engineering",
+      featured: true,
+      tools:    ["D3FEND Matrix", "Wazuh", "Docker", "DVWA", "Hydra", "Kali Linux"],
+      url:      "https://www.linkedin.com/pulse/interview-preparation-detection-applying-d3fend-concepts-harris-trehc"
+    },
+    {
+      title:    "From Rejection to Resilience: My Journey Through the SANS Cyber Diversity Academy",
+      slug:     "from-rejection-to-resilience-my-journey-through-the-sans-cyber-diversity-academy",
+      summary:  "A candid account of navigating rejection and finding a path forward through the SANS Cyber Diversity Academy — covering the application process, what the program offers, and the lessons learned about persistence, community, and growth in the cybersecurity field.",
+      date:     "Feb 2026",
+      category: "Career",
+      featured: true,
+      tools:    [],
+      url:      "https://www.linkedin.com/pulse/from-rejection-resilience-my-journey-through-sans-cyber-andrew-harris-50tte"
+    },
+    {
+      title:    "14 Days of PowerShell: From Exposure to Execution",
+      slug:     "14-days-of-powershell-from-exposure-to-execution",
+      summary:  "A 14-day structured deep-dive into PowerShell for security practitioners — covering core syntax, scripting fundamentals, and security-relevant techniques including enumeration, automation, and execution methods commonly encountered in both attacker TTPs and defensive SOC workflows.",
+      date:     "Feb 2026",
+      category: "Detection Engineering",
+      featured: true,
+      tools:    ["PowerShell"],
+      url:      "https://www.linkedin.com/pulse/14-days-powershell-from-exposure-execution-andrew-harris-wjnpc/"
+    },
+    {
+      title:    "From Click to Compromise — DFIR Foundations and Techniques Write-Up",
+      slug:     "from-click-to-compromise-dfir-foundations-and-techniques-write-up",
+      summary:  "Full intrusion chain analysis tracing an attacker from initial phishing email through credential harvesting, C2 beaconing, persistence, and data exfiltration. Applied core DFIR methodology using packet analysis, memory forensics, and log investigation, with the complete attack chain mapped to the MITRE ATT&CK framework.",
+      date:     "Feb 2026",
+      category: "DFIR",
+      featured: true,
+      tools:    ["Wireshark", "Splunk", "Volatility3", "Strings"],
+      url:      "https://www.linkedin.com/pulse/from-click-compromise-dfir-foundations-techniques-write-up-harris-e0fsc"
+    }
+  ],
+
+  // ─────────────────────────────────────────────
+  // INTERNSHIP — internship.html
+  // ─────────────────────────────────────────────
+  internship: [
+    {
+      name:        "Internship Overview",
+      slug:        "internship-overview",
+      description: "Overview of the Log(N) Pacific internship — goals, scope, and the security work undertaken across threat hunting, vulnerability management, and system hardening.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship",
+      category:    "Overview"
+    },
+    {
+      name:        "Threat Hunt Reports",
+      slug:        "threat-hunt-reports",
+      description: "Structured threat hunting reports produced during the internship, documenting hypotheses, detection logic, findings, and recommendations aligned to the MITRE ATT&CK framework.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/Threat%20Hunt%20Reports",
+      category:    "Threat Hunting"
+    },
+    {
+      name:        "STIGS",
+      slug:        "stigs",
+      description: "Security Technical Implementation Guide (STIG) checklists and hardening documentation applied to systems during the internship to meet compliance and security baseline requirements.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/STIGS",
+      category:    "Compliance"
+    },
+    {
+      name:        "Vulnerability Management",
+      slug:        "vulnerability-management",
+      description: "Vulnerability scan results, risk prioritization, and remediation tracking documentation produced during the internship using industry-standard vulnerability management workflows.",
+      github:      "https://github.com/andrewjharrisportfolio/lognpacificInternship/tree/main/Vulnerability%20Management",
+      category:    "Vulnerability Management"
+    }
+  ],
+
+  // ─────────────────────────────────────────────
   // CONTACT — contact.html
   // ─────────────────────────────────────────────
   contact: {
-    email:    "andrewjharris@protonmail.com",
-    linkedin: "https://www.linkedin.com/in/andrewjharris-sec/",
-    github:   "https://github.com/andrewjharrisportfolio"
+    email:    "andrewjharris12@gmail.com",
+    linkedin: "https://www.linkedin.com/in/andrewjharris8/",
+    github:   "https://github.com/andrewjharrisportfolio/MyCyberPortfolio"
   }
 
 };
